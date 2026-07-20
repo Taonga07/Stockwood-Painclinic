@@ -1,0 +1,12 @@
+// =========================================================
+// LAYOUT / SECTIONS
+// =========================================================
+
+.section { padding: 64px 0; }
+
+.page-hero {
+  padding: 56px 0 20px;
+  background: var(--paper);
+}
+
+.section-intro { max-width: 760px; margin-bottom: 2em; color: var(--ink-soft); }

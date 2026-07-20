@@ -1,0 +1,26 @@
+// =========================================================
+// BASE / ROOT
+// Exposes the settings above as CSS custom properties, so
+// they're also available at runtime (e.g. to JS or to a
+// browser devtools override) and not just at build time.
+// =========================================================
+
+:root {
+  --paper: #{$paper};
+  --paper-deep: #{$paper-deep};
+  --ink: #{$ink};
+  --ink-soft: #{$ink-soft};
+  --sage: #{$sage};
+  --sage-deep: #{$sage-deep};
+  --sage-pale: #{$sage-pale};
+  --brass: #{$brass};
+  --brass-deep: #{$brass-deep};
+  --line: #{$line};
+  --white: #{$white};
+
+  --font-display: #{$font-display};
+  --font-body: #{$font-body};
+
+  --wrap: #{$wrap-width};
+  --radius: #{$radius};
+}

@@ -1,0 +1,74 @@
+{{ define "main" }}
+
+<section class="hero" id="hero">
+  {{ range $i, $slide := .Params.hero_slides }}
+  <div class="hero-slide {{ if eq $i 0 }}is-active{{ end }}" style="background-image:url('{{ $slide.image }}');">
+    <div class="hero-overlay"></div>
+    <div class="wrap hero-content">
+      <h1>{{ $slide.heading }}</h1>
+      {{ with $slide.text }}<p>{{ . }}</p>{{ end }}
+      <a class="btn btn-light" href="{{ $slide.link }}">More Detail</a>
+    </div>
+  </div>
+  {{ end }}
+  <div class="hero-dots">
+    {{ range $i, $slide := .Params.hero_slides }}
+    <button class="hero-dot {{ if eq $i 0 }}is-active{{ end }}" data-slide="{{ $i }}" aria-label="Show slide {{ add $i 1 }}"></button>
+    {{ end }}
+  </div>
+</section>
+
+<div class="divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 20 C 150 0, 300 40, 450 20 S 750 0, 900 20 S 1150 40, 1200 20" /></svg>
+</div>
+
+<section class="section intro-section">
+  <div class="wrap intro-grid">
+    <div class="intro-image">
+      <img src="/images/article_images/Monika.jpg" alt="Monika Wiesenthal">
+    </div>
+    <div class="intro-copy">
+      <p class="eyebrow">Welcome</p>
+      <h2>Welcome to Monika Wiesenthal's Osteopathic Practice</h2>
+      <p class="lede">Osteopath and Sports Injuries Therapist</p>
+      {{ .Content }}
+      <a class="btn btn-primary" href="{{ site.Params.phoneHref | safeURL }}">Call {{ site.Params.phone }}</a>
+      <a class="btn btn-outline" href="/booking/online-booking/">Book Online</a>
+    </div>
+  </div>
+</section>
+
+<section class="section hours-section">
+  <div class="wrap">
+    <p class="eyebrow">Opening Times</p>
+    <h2>Consultations by appointment only</h2>
+    <table class="hours-table">
+      <tbody>
+        {{ range .Params.opening_hours }}
+        <tr>
+          <th>{{ .day }}</th>
+          <td>{{ .hours }}</td>
+        </tr>
+        {{ end }}
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="section testimonial-section">
+  <div class="wrap">
+    <p class="eyebrow eyebrow-light">Client Reviews &amp; Ratings</p>
+    <h2 class="on-dark">What patients say</h2>
+    <div class="testimonial-grid">
+      {{ range .Params.testimonials }}
+      <blockquote class="testimonial-card">
+        <p>&ldquo;{{ .quote }}&rdquo;</p>
+        <cite>{{ .author }}</cite>
+      </blockquote>
+      {{ end }}
+    </div>
+    <p class="testimonial-note">All client reviews can be read on the clinic's Facebook page.</p>
+  </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,33 @@
+// =========================================================
+// PAGES / ARTICLE
+// =========================================================
+
+.article-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 48px;
+  align-items: start;
+
+  @media (max-width: $bp-tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.article-content {
+  background: var(--white);
+  padding: 40px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+
+  img { border-radius: var(--radius); margin: 0.5em 0; }
+  h2, h3 { margin-top: 1.4em; }
+  ul, ol { padding-left: 1.4em; }
+  iframe { max-width: 100%; border-radius: var(--radius); }
+}
+
+.back-link { margin-top: 2em; font-weight: 600; }
+.post-date { display: block; color: var(--ink-soft); font-size: 0.9rem; margin-top: 0.4em; }
+
+@media (max-width: $bp-tablet) {
+  .sidebar-card { position: static; }
+}

@@ -1,0 +1,28 @@
+// =========================================================
+// BASE / RESET
+// =========================================================
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--ink);
+  color: var(--white);
+  padding: 10px 16px;
+  z-index: 200;
+
+  &:focus { left: 12px; top: 12px; }
+}

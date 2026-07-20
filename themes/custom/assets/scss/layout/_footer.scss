@@ -1,0 +1,51 @@
+// =========================================================
+// LAYOUT / FOOTER
+// =========================================================
+
+.site-footer {
+  background: var(--ink);
+  color: var(--sage-pale);
+  margin-top: 40px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 32px;
+  padding: 56px 24px 32px;
+
+  @media (max-width: $bp-tablet) {
+    grid-template-columns: 1fr;
+    padding-bottom: 8px;
+  }
+}
+
+.footer-col {
+  h3 {
+    color: var(--white);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  a { color: var(--sage-pale); }
+  a:hover { color: var(--brass); }
+}
+
+.footer-tagline { color: var(--sage-pale); opacity: 0.85; }
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 18px 24px;
+  font-size: 0.85rem;
+  opacity: 0.75;
+}

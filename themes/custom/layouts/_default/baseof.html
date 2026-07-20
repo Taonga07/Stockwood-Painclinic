@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+  {{ partial "global/head.html" . }}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  {{ partial "global/header.html" . }}
+  <main id="main">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "global/footer.html" . }}
+  <script src="/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{{ $showText := .showText | default true }}
+<a class="brand" href="/">
+  <span class="brand-mark" aria-hidden="true">
+    <svg viewBox="0 0 40 40" width="{{ .size | default 36 }}" height="{{ .size | default 36 }}"><path d="M20 2 C15 10, 26 14, 20 20 C14 26, 25 30, 20 38" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+  </span>
+  {{ if $showText }}
+  <span class="brand-text">
+    <span class="brand-name">Monika Wiesenthal</span>
+    <span class="brand-sub">Osteopath &middot; Bristol</span>
+  </span>
+  {{ end }}
+</a>

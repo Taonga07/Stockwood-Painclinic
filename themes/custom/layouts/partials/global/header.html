@@ -1,0 +1,14 @@
+<header class="site-header">
+  {{ partial "global/topbar.html" . }}
+
+  <div class="wrap nav-inner">
+    {{ partial "global/brand.html" (dict "showText" true "size" 36) }}
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Menu</span>
+    </button>
+
+    {{ partial "global/nav.html" . }}
+  </div>
+</header>

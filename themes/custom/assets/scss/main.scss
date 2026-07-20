@@ -1,0 +1,35 @@
+// =========================================================
+// MAIN.SCSS
+// Entry point compiled by Hugo Pipes. Import order matters:
+// settings first (variables only, no output), then base,
+// layout, components, and finally page-specific overrides.
+// =========================================================
+
+// Settings — the tokens/"settings" layer. Edit these files
+// to re-theme the site without touching any other file.
+@import "settings/colors";
+@import "settings/typography";
+@import "settings/spacing";
+@import "settings/breakpoints";
+
+// Base
+@import "base/root";
+@import "base/reset";
+@import "base/base";
+
+// Layout
+@import "layout/header";
+@import "layout/hero";
+@import "layout/divider";
+@import "layout/sections";
+@import "layout/footer";
+
+// Components
+@import "components/buttons";
+@import "components/cards";
+@import "components/testimonials";
+@import "components/price-cards";
+
+// Pages
+@import "pages/home";
+@import "pages/article";

@@ -1,0 +1,26 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="wrap">
+    <h1>Blog</h1>
+  </div>
+</section>
+
+<div class="divider divider-small" aria-hidden="true">
+  <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 20 C 150 0, 300 40, 450 20 S 750 0, 900 20 S 1150 40, 1200 20" /></svg>
+</div>
+
+<section class="section">
+  <div class="wrap">
+    <div class="blog-list">
+      {{ range .Pages.ByDate.Reverse }}
+      <a class="blog-card" href="{{ .RelPermalink }}">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+        <h2>{{ .Title }}</h2>
+        {{ if .Summary }}<p>{{ .Summary | plainify | truncate 160 }}</p>{{ end }}
+        <span class="card-link">Read more &rarr;</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

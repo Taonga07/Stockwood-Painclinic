@@ -1,0 +1,120 @@
+# Sveltia CMS configuration optimized for Cloudflare Pages & Hugo
+backend:
+  name: github
+  repo: Taonga07/Stockwood-Painclinic
+  branch: main
+  base_url: https://stockwood-painclinic.pages.dev
+
+# Add site links in the CMS (optional)
+site_url: https://stockwood-painclinic.pages.dev
+
+publish_mode: editorial_workflow
+
+media_folder: "static/images"
+public_folder: "/images"
+
+editor:
+  preview: false
+
+collections:
+  # 1. PAGES (Smart Single Collection with dynamic routing)
+  - name: "pages"
+    label: "Pages"
+    icon: "description"
+    folder: "content"
+    extension: "md"
+    format: "yaml-frontmatter"
+    create: true
+
+    # Reads the 'section' dropdown and creates the subfolder path dynamically
+    path: "{{fields.section}}/{{slug}}"
+
+    # Automates dashboard organization so your workspace stays tidy
+    view_groups:
+      - label: "By Folder"
+        field: "section"
+        default: true
+
+    view_filters:
+      - label: "Services"
+        field: "section"
+        pattern: "services"
+      - label: "Projects"
+        field: "section"
+        pattern: "projects"
+
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+
+      # THIS ACTS AS YOUR VIRTUAL FOLDER CREATOR/SELECTOR
+      - label: "Belongs in Folder"
+        name: "section"
+        widget: "select"
+        options:
+          - { label: "Main Root (content/)", value: "." }
+          - { label: "Services (content/services/)", value: "services" }
+          - { label: "Projects (content/projects/)", value: "projects" }
+          - { label: "Legal (content/legal/)", value: "legal" }
+        default: "."
+
+      # FIXED: Moved out of the selector options scope to the root of fields
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # 2. POSTS (For blog articles)
+  - name: "blog"
+    label: "Posts"
+    folder: "content/blog"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image", name: "image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  # 3. CONFIGURATION (For split-up site settings)
+  - name: "configuration"
+    label: "Configuration"
+    files:
+      - label: "Contact Details"
+        name: "contact"
+        file: "data/contact.yml"
+        fields:
+          - {label: "Email Address", name: "email", widget: "string"}
+          - {label: "Phone Number", name: "phone", widget: "string"}
+
+      - label: "Opening Hours"
+        name: "hours"
+        file: "data/hours.yml"
+        fields:
+          - {label: "Monday - Friday", name: "weekdays", widget: "string"}
+          - {label: "Saturday", name: "saturday", widget: "string"}
+          - {label: "Sunday", name: "sunday", widget: "string"}
+
+      - label: "Navigation Menu"
+        name: "nav"
+        file: "data/nav.yml"
+        fields:
+          - label: "Menu Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - {label: "Link Name", name: "name", widget: "string"}
+              - {label: "URL", name: "url", widget: "string"}
+
+      - label: "Testimonials"
+        name: "testimonials"
+        file: "data/testimonials.yml"
+        fields:
+          - label: "Testimonials List"
+            name: "list"
+            widget: "list"
+            fields:
+              - {label: "Author Name", name: "name", widget: "string"}
+              - {label: "Quote", name: "quote", widget: "text"}
+
+      - label: "Theme Settings"
+        name: "theme"
+        file: "data/appearance.yml"
+        fields:
+          - {label: "Primary Theme Color", name: "primary_color", widget: "color"}
+          - {label: "Secondary Theme Color", name: "secondary_color", widget: "color"}

@@ -1,0 +1,40 @@
+// =========================================================
+// COMPONENTS / BUTTONS
+// =========================================================
+
+.btn {
+  display: inline-block;
+  padding: 0.75em 1.6em;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1.5px solid transparent;
+  transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease, border-color .15s ease;
+  margin: 0.3em 0.5em 0.3em 0;
+
+  &:hover { transform: translateY(-1px); }
+}
+
+.btn-primary {
+  background: var(--sage-deep);
+  color: var(--white);
+
+  &:hover { background: var(--ink); color: var(--white); }
+}
+
+.btn-outline {
+  border-color: var(--sage-deep);
+  color: var(--sage-deep);
+  background: transparent;
+
+  &:hover { background: var(--sage-deep); color: var(--white); }
+}
+
+.btn-light {
+  background: var(--white);
+  color: var(--sage-deep);
+
+  &:hover { background: var(--brass); color: var(--white); }
+}
+
+.btn-block { display: block; text-align: center; margin-top: 1em; }
