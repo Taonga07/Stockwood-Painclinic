@@ -4,7 +4,7 @@ backend:
   repo: Taonga07/Stockwood-Painclinic
   branch: master
   base_url: https://stockwood-painclinic.pages.dev
-  auth_endpoint: auth
+  auth_endpoint: /auth
 
 # Add site links in the CMS (optional)
 site_url: https://stockwood-painclinic.pages.dev
