@@ -2,7 +2,8 @@ import { defineConfig } from "tinacms";
 
 export default defineConfig({
   // Fall back across local, Vercel, and Cloudflare Pages branch variables
-  branch: process.env.GITHUB_BRANCH,
+  branch: process.env.CF_PAGES_BRANCH || process.env.CF_PAGES_BRANCH,
+,
 
   // Tina Cloud credentials
   clientId: process.env.TINA_CLIENT_ID,
