@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "tinacms dev -c \"hugo server -D -p 1313\"",
-    "build": "node -e \"console.log('TINA_CLIENT_ID:', process.env.NEXT_PUBLIC_TINA_CLIENT_ID || process.env.TINA_CLIENT_ID || 'MISSING'); console.log('TINA_TOKEN:', process.env.TINA_TOKEN ? 'EXISTS (length: ' + process.env.TINA_TOKEN.length + ')' : 'MISSING');\" && npx tinacms build && hugo --minify"
+    "build": "node -e \"console.log('TINA_CLIENT_ID:', process.env.TINA_CLIENT_ID); console.log('TINA_TOKEN:', process.env.TINA_TOKEN);\" && npx tinacms build && hugo --minify"
   },
   "repository": {
     "type": "git",
