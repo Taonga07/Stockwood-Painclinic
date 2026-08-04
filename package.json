@@ -1,11 +1,9 @@
 {
   "name": "stockwood-painclinic",
   "version": "1.0.0",
-  "description": "condense the side bar in the cms into 4 section pages for all webpages, post for blog articles, appeance to edit the settings of the scss and configirtation which edits config files and site settings. split up the hugo.toml into smaller files that can be edited and then combined to generate actual file also testimonal the nav bar menu order and opening hours contact detail alll detail like that should be in there own files and eitable in configoration. all fix it so images show and allow image folder to show to",
-  "main": "index.js",
   "scripts": {
-      "dev": "npx tinacms dev -c \"hugo server -D -p 1313\"",
-      "build": "npx tinacms build && hugo --minify"
+    "dev": "tinacms dev -c \"hugo server -D -p 1313\"",
+    "build": "node -e \"console.log('TINA_CLIENT_ID:', process.env.NEXT_PUBLIC_TINA_CLIENT_ID || process.env.TINA_CLIENT_ID || 'MISSING'); console.log('TINA_TOKEN:', process.env.TINA_TOKEN ? 'EXISTS (length: ' + process.env.TINA_TOKEN.length + ')' : 'MISSING');\" && npx tinacms build && hugo --minify"
   },
   "repository": {
     "type": "git",
