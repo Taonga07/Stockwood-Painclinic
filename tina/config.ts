@@ -12,18 +12,73 @@ export default defineConfig({
   // contentApiUrlOverride: process.env.NEXT_PUBLIC_TINA_AWS_SIGNAL_URL,
 
   build: {
-    outputFolder: "admin",
-    publicFolder: "static",
-  },
-  media: {
-    tina: {
-      mediaRoot: "uploads",
+      outputFolder: "admin",
       publicFolder: "static",
     },
-  },
-  schema: {
-    collections: [
-      // Your collections here
-    ],
-  },
-});
+    media: {
+      tina: {
+        mediaRoot: "uploads",
+        publicFolder: "static",
+      },
+    },
+    schema: {
+      collections: [
+        {
+          name: "posts",
+          label: "Blog Posts",
+          path: "blogs",
+          fields: [
+            {
+              type: "string",
+              name: "title",
+              label: "Title",
+              isTitle: true,
+              required: true,
+            },
+            {
+              type: "rich-text",
+              name: "body",
+              label: "Body",
+              isBody: true,
+            },
+          ],
+        },
+        {
+          name: "pages",
+          label: "Pages",
+          path: "content",
+          match: {
+            exclude: "./blog",
+          },
+          fields: [
+            {
+              type: "string",
+              name: "title",
+              label: "Title",
+              isTitle: true,
+              required: true,
+            },
+            {
+              type: "rich-text",
+              name: "body",
+              label: "Body",
+              isBody: true,
+            },
+          ],
+        },
+        {
+          name: "settings",
+          label: "Settings",
+          path: "assets",
+          format: "json",
+          fields: [
+            {
+              type: "string",
+              name: "site_title",
+              label: "Site Title",
+            },
+          ],
+        },
+      ],
+    },
+  });
