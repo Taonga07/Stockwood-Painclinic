@@ -8,15 +8,19 @@
   },
   "media": {
     "tina": {
-      "mediaRoot": "uploads",
-      "publicFolder": "static"
+      "mediaRoot": "",
+      "publicFolder": "media"
     }
   },
   "schema": {
     "collections": [
-      "./schema/posts.json",
       "./schema/pages.json",
-      "./schema/settings.json"
+      "./schema/posts.json",
+      "./schema/contact.json",
+      "./schema/opening-hours.json",
+      "./schema/testimonials.json",
+      "./schema/pricing.json",
+      "./schema/style.json"
     ]
   }
 }

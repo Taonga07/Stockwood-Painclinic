@@ -1,0 +1,4 @@
+{{- /* Embedded Google Map. Params: embed_url, height (default 450) */ -}}
+{{- with .Get "embed_url" }}
+<iframe src="{{ . | safeURL }}" width="100%" height="{{ $.Get "height" | default "450" }}" style="border:0;" allowfullscreen loading="lazy"></iframe>
+{{- end }}

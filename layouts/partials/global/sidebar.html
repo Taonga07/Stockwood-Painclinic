@@ -1,0 +1,10 @@
+{{- $contact := site.Data.configuraton.contact -}}
+<aside class="sidebar">
+  <div class="sidebar-card">
+    <h3>Get in touch</h3>
+    <p><a href="{{ $contact.phone_href | safeURL }}">{{ $contact.phone }}</a></p>
+    <p><a href="mailto:{{ $contact.email }}">{{ $contact.email }}</a></p>
+    <p>{{ $contact.address1 }}<br>{{ $contact.address2 }}</p>
+    <a class="btn btn-primary btn-block" href="/booking/online-booking/">Book Online</a>
+  </div>
+</aside>

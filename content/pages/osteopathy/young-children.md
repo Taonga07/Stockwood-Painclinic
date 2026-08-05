@@ -2,7 +2,7 @@
 title: "Young Children"
 ---
 
-![](/images/article_images/Children3.jpg)
+{{< image src="article_images/Children3.jpg" alt="Osteopathy for young children" >}}
 
 Problems may become apparent as a result of mechanical stresses on the body. These can greatly influence educational and social development. Complaints often suffered by older children and teenagers include:
 

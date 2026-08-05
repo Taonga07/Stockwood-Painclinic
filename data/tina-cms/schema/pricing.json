@@ -1,0 +1,21 @@
+{
+  "name": "pricing",
+  "label": "Price List",
+  "path": "data/configuraton",
+  "format": "json",
+  "match": { "include": "pricing" },
+  "fields": [
+    {
+      "type": "object",
+      "name": "plans",
+      "label": "Plans",
+      "list": true,
+      "ui": { "itemProps": { "label": "{{item.name}} - {{item.price}}" } },
+      "fields": [
+        { "type": "string", "name": "name", "label": "Plan name", "required": true },
+        { "type": "string", "name": "price", "label": "Price (e.g. '£100')", "required": true },
+        { "type": "string", "name": "features", "label": "Features", "list": true }
+      ]
+    }
+  ]
+}

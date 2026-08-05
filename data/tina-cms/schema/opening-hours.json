@@ -1,0 +1,20 @@
+{
+  "name": "openingHours",
+  "label": "Opening Hours",
+  "path": "data/configuraton",
+  "format": "json",
+  "match": { "include": "opening_hours" },
+  "fields": [
+    {
+      "type": "object",
+      "name": "hours",
+      "label": "Days",
+      "list": true,
+      "ui": { "itemProps": { "label": "{{item.day}} - {{item.hours}}" } },
+      "fields": [
+        { "type": "string", "name": "day", "label": "Day", "required": true },
+        { "type": "string", "name": "hours", "label": "Hours (e.g. '8:00 AM - 1:00 PM' or 'CLOSED')", "required": true }
+      ]
+    }
+  ]
+}

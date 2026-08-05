@@ -2,7 +2,7 @@
 title: "What Can Be Treated?"
 ---
 
-![](/images/article_images/Osteopic.jpg)
+{{< image src="article_images/Osteopic.jpg" alt="Conditions osteopathy can treat" >}}
 
 **Monika treats patients with:**
 

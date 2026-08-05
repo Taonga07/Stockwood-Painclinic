@@ -1,23 +1,159 @@
 {
   "name": "pages",
   "label": "Pages",
-  "path": "content",
-  "match": {
-    "exclude": "./blog"
-  },
+  "path": "content/pages",
+  "format": "md",
+  "match": { "exclude": "" },
   "fields": [
-    {
-      "type": "string",
-      "name": "title",
-      "label": "Title",
-      "isTitle": true,
-      "required": true
-    },
+    { "type": "string", "name": "title", "label": "Title", "isTitle": true, "required": true },
+    { "type": "string", "name": "eyebrow", "label": "Eyebrow label (above the title)" },
+    { "type": "boolean", "name": "hide_page_hero", "label": "Hide the standard title banner (used by the home page)" },
+    { "type": "boolean", "name": "hide_sidebar", "label": "Hide the 'get in touch' sidebar" },
     {
       "type": "rich-text",
       "name": "body",
       "label": "Body",
-      "isBody": true
+      "isBody": true,
+      "templates": [
+        {
+          "name": "hero-slider",
+          "label": "Hero Slider (home page banner)",
+          "fields": [
+            {
+              "type": "object",
+              "name": "slides",
+              "label": "Slides",
+              "list": true,
+              "ui": { "itemProps": { "label": "{{item.heading}}" } },
+              "fields": [
+                { "type": "image", "name": "image", "label": "Image" },
+                { "type": "string", "name": "heading", "label": "Heading" },
+                { "type": "string", "name": "text", "label": "Text" },
+                { "type": "string", "name": "link", "label": "Link" },
+                { "type": "string", "name": "link_text", "label": "Button text" }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "welcome-intro",
+          "label": "Welcome / Intro Section",
+          "fields": [
+            { "type": "image", "name": "image", "label": "Photo" },
+            { "type": "string", "name": "eyebrow", "label": "Eyebrow" },
+            { "type": "string", "name": "heading", "label": "Heading" },
+            { "type": "string", "name": "lede", "label": "Lede line" },
+            { "type": "rich-text", "name": "children", "label": "Body copy" }
+          ]
+        },
+        {
+          "name": "opening-hours",
+          "label": "Opening Hours Table",
+          "fields": [
+            { "type": "string", "name": "title", "label": "Eyebrow label" },
+            { "type": "string", "name": "subtitle", "label": "Heading" },
+            {
+              "type": "object",
+              "name": "rows",
+              "label": "Days (leave empty to use the sitewide Opening Hours settings)",
+              "list": true,
+              "ui": { "itemProps": { "label": "{{item.day}}" } },
+              "fields": [
+                { "type": "string", "name": "day", "label": "Day" },
+                { "type": "string", "name": "hours", "label": "Hours" }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "testimonials",
+          "label": "Testimonials Section",
+          "fields": [
+            { "type": "string", "name": "title", "label": "Eyebrow label" },
+            { "type": "string", "name": "heading", "label": "Heading" },
+            { "type": "string", "name": "note", "label": "Footnote" },
+            {
+              "type": "object",
+              "name": "quotes",
+              "label": "Quotes (leave empty to use the sitewide Testimonials settings)",
+              "list": true,
+              "ui": { "itemProps": { "label": "{{item.author}}" } },
+              "fields": [
+                { "type": "rich-text", "name": "children", "label": "Quote" },
+                { "type": "string", "name": "author", "label": "Author" }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "price-table",
+          "label": "Price Table",
+          "fields": [
+            {
+              "type": "object",
+              "name": "plans",
+              "label": "Plans (leave empty to use the sitewide Price List settings)",
+              "list": true,
+              "ui": { "itemProps": { "label": "{{item.name}}" } },
+              "fields": [
+                { "type": "string", "name": "name", "label": "Plan name" },
+                { "type": "string", "name": "price", "label": "Price" },
+                { "type": "string", "name": "cta_text", "label": "Button text" },
+                { "type": "string", "name": "cta_link", "label": "Button link" },
+                { "type": "rich-text", "name": "children", "label": "Features (bullet list)" }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "clinics",
+          "label": "Clinic Locations Grid",
+          "fields": [
+            {
+              "type": "object",
+              "name": "locations",
+              "label": "Clinics",
+              "list": true,
+              "ui": { "itemProps": { "label": "{{item.name}}" } },
+              "fields": [
+                { "type": "string", "name": "name", "label": "Name" },
+                { "type": "image", "name": "image", "label": "Photo" },
+                { "type": "string", "name": "link", "label": "Link" }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "map",
+          "label": "Embedded Map",
+          "fields": [
+            { "type": "string", "name": "embed_url", "label": "Google Maps embed URL" },
+            { "type": "string", "name": "height", "label": "Height (px)" }
+          ]
+        },
+        {
+          "name": "button",
+          "label": "Button / Call to action",
+          "fields": [
+            { "type": "string", "name": "href", "label": "Link" },
+            { "type": "string", "name": "style", "label": "Style", "options": ["primary", "outline", "light"] },
+            { "type": "rich-text", "name": "children", "label": "Button text" }
+          ]
+        },
+        {
+          "name": "image",
+          "label": "Content Image",
+          "fields": [
+            { "type": "image", "name": "src", "label": "Image" },
+            { "type": "string", "name": "alt", "label": "Alt text" }
+          ]
+        },
+        {
+          "name": "booking",
+          "label": "Online Booking Widget",
+          "fields": []
+        }
+      ]
     }
   ]
 }

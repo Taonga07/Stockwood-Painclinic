@@ -1,0 +1,17 @@
+{{- /* Wrapper for client testimonials. Children: testimonial. Falls back to site data if empty. */ -}}
+{{- $title := .Get "title" | default "Client Reviews &amp; Ratings" -}}
+{{- $heading := .Get "heading" | default "What patients say" -}}
+<section class="section testimonial-section">
+  <div class="wrap">
+    <p class="eyebrow eyebrow-light">{{ $title | safeHTML }}</p>
+    <h2 class="on-dark">{{ $heading }}</h2>
+    <div class="testimonial-grid">
+      {{ if .Inner }}{{ .Inner }}{{ else }}
+        {{ range site.Data.configuraton.testimonials.items }}
+        <blockquote class="testimonial-card"><p>&ldquo;{{ .quote }}&rdquo;</p><cite>{{ .author }}</cite></blockquote>
+        {{ end }}
+      {{ end }}
+    </div>
+    {{ with .Get "note" }}<p class="testimonial-note">{{ . }}</p>{{ end }}
+  </div>
+</section>

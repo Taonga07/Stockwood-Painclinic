@@ -1,0 +1,20 @@
+{
+  "name": "testimonials",
+  "label": "Testimonials",
+  "path": "data/configuraton",
+  "format": "json",
+  "match": { "include": "testimonials" },
+  "fields": [
+    {
+      "type": "object",
+      "name": "items",
+      "label": "Quotes",
+      "list": true,
+      "ui": { "itemProps": { "label": "{{item.author}}" } },
+      "fields": [
+        { "type": "rich-text", "name": "quote", "label": "Quote" },
+        { "type": "string", "name": "author", "label": "Author" }
+      ]
+    }
+  ]
+}

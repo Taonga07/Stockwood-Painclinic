@@ -2,10 +2,12 @@
   "name": "stockwood-painclinic",
   "version": "1.0.0",
   "scripts": {
-    "dev": "tinacms dev -c 'hugo server -D --configDir data/hugo' ",
+    "dev": "tinacms dev -c \"hugo server -D --configDir data/hugo\"",
     "build": "tinacms build && hugo --minify --configDir data/hugo",
+    "hugo:build": "hugo --minify --configDir data/hugo",
+    "hugo:dev": "hugo server -D --configDir data/hugo",
     "clean": "git clean -fdX -e .env",
-    "init": "npm install"
+    "init": "npm install && hugo mod init"
   },
   "repository": {
     "type": "git",

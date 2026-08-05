@@ -1,0 +1,3 @@
+{{- /* Usage: {{< button href="/booking/online-booking/" style="primary" >}}Book Online{{< /button >}} */ -}}
+{{- $style := .Get "style" | default "primary" -}}
+<a class="btn btn-{{ $style }}" href="{{ .Get "href" | safeURL }}">{{ .Inner }}</a>

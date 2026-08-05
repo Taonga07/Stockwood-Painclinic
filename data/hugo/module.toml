@@ -3,14 +3,23 @@ module:
     - source: content/pages
       target: content
 
-    - source: content/post
+    - source: content/posts
       target: content/blog
 
     - source: media
-      target: assets/media    # Enables Hugo Pipes image processing via resources.Get
+      target: assets/media
 
-    - source: content/data
+    - source: data
       target: data
 
     - source: data/tina-cms
       target: tina
+
+    - source: theme/archetypes
+      target: archetypes
+
+    - source: theme/layouts
+      target: layouts
+
+    - source: theme/assets
+      target: assets

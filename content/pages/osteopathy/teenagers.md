@@ -6,4 +6,4 @@ As young people grow up the body frame undergoes a great number of changes. Oste
 
 If these minor problems are left un-diagnosed and untreated they may lead to problems later in life.By analysing, treating and managing problems associated with growth, osteopaths make a major contribution to ensuring that young people become and stay fit and healthy.Teenagers also become much more active and take part in many sporting and recreational activities which carry the risk of sprains and strains. Skilful diagnosis and treatment by the osteopath can prevent lesions developing and allow the body's framework to heal naturally and adjust to the stresses and strains put upon it. If you are unsure if your child will benefit from treatment please contact me.
 
-![](/images/article_images/20235294_s.jpg)
+{{< image src="article_images/20235294_s.jpg" alt="Osteopathy for teenagers" >}}

@@ -1,0 +1,40 @@
+{{- /*
+  Processed, responsive image partial.
+  Params (dict):
+    src      - path relative to the media mount, e.g. "banners/SportInjury.jpg"
+               (media/ is mounted to assets/media, so this resolves to assets/media/<src>)
+    alt      - alt text (required for a11y)
+    class    - optional CSS class on the <img>
+    widths   - optional slice of target widths in px, e.g. (slice 480 960 1600)
+    sizes    - optional "sizes" attribute, defaults to "100vw"
+    loading  - optional loading attribute, defaults to "lazy"
+  Falls back to an unprocessed <img> tag if the resource can't be found or isn't a
+  processable raster image (e.g. .svg), so a bad/missing path never hard-fails the build.
+*/ -}}
+{{- $src := .src -}}
+{{- $alt := .alt | default "" -}}
+{{- $class := .class | default "" -}}
+{{- $widths := .widths | default (slice 480 960 1600) -}}
+{{- $sizes := .sizes | default "100vw" -}}
+{{- $loading := .loading | default "lazy" -}}
+{{- $res := resources.GetMatch (printf "media/%s" $src) -}}
+{{- if not $res }}{{ $res = resources.GetMatch $src }}{{ end -}}
+{{- if and $res (in (slice "image/jpeg" "image/png" "image/webp") $res.MediaType.SubType) -}}
+  {{- $set := slice -}}
+  {{- range $w := $widths -}}
+    {{- if ge $res.Width $w -}}
+      {{- $resized := $res.Resize (printf "%dx webp q85" $w) -}}
+      {{- $set = $set | append (printf "%s %dw" $resized.RelPermalink $w) -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $fallback := $res.Resize (printf "%dx webp q85" (index $widths 0)) -}}
+  <img
+    src="{{ $fallback.RelPermalink }}"
+    {{ with $set }}srcset="{{ delimit . ", " }}" sizes="{{ $sizes }}"{{ end }}
+    width="{{ $res.Width }}" height="{{ $res.Height }}"
+    alt="{{ $alt }}" class="{{ $class }}" loading="{{ $loading }}" decoding="async">
+{{- else if $res -}}
+  <img src="{{ $res.RelPermalink }}" alt="{{ $alt }}" class="{{ $class }}" loading="{{ $loading }}">
+{{- else -}}
+  <img src="{{ $src }}" alt="{{ $alt }}" class="{{ $class }}" loading="{{ $loading }}">
+{{- end -}}

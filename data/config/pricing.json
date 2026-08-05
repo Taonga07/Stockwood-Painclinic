@@ -1,0 +1,19 @@
+{
+  "plans": [
+    {
+      "name": "Initial Consultation",
+      "price": "£100",
+      "features": ["Thorough case history taking", "Examination", "Treatment"]
+    },
+    {
+      "name": "Subsequent Treatments",
+      "price": "£75",
+      "features": ["Follow up examination", "Follow up treatment"]
+    },
+    {
+      "name": "Extended Consultation",
+      "price": "£100",
+      "features": ["Follow up examination", "Extended follow up treatment"]
+    }
+  ]
+}

@@ -1,20 +1,27 @@
 {
   "name": "posts",
   "label": "Blog Posts",
-  "path": "blogs",
+  "path": "content/posts",
+  "format": "md",
   "fields": [
-    {
-      "type": "string",
-      "name": "title",
-      "label": "Title",
-      "isTitle": true,
-      "required": true
-    },
+    { "type": "string", "name": "title", "label": "Title", "isTitle": true, "required": true },
+    { "type": "datetime", "name": "date", "label": "Date" },
     {
       "type": "rich-text",
       "name": "body",
       "label": "Body",
-      "isBody": true
+      "isBody": true,
+      "templates": [
+        { "name": "image", "label": "Content Image", "fields": [
+          { "type": "image", "name": "src", "label": "Image" },
+          { "type": "string", "name": "alt", "label": "Alt text" }
+        ] },
+        { "name": "button", "label": "Button / Call to action", "fields": [
+          { "type": "string", "name": "href", "label": "Link" },
+          { "type": "string", "name": "style", "label": "Style", "options": ["primary", "outline", "light"] },
+          { "type": "rich-text", "name": "children", "label": "Button text" }
+        ] }
+      ]
     }
   ]
 }

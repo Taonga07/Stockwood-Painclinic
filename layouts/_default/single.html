@@ -1,0 +1,45 @@
+{{- /*
+  Generic single-page layout used for every page in the site (home, booking,
+  find-us, osteopathy pages, articles, etc). Page-specific content — hero
+  sliders, pricing tables, opening hours, maps, testimonials — is authored as
+  shortcodes inside the page body (.Content) rather than as separate
+  per-section layout templates. See theme/layouts/shortcodes/.
+
+  Front matter switches:
+    hide_page_hero: true   - skip the standard title banner AND the
+                              wrap/sidebar article container, rendering
+                              .Content directly full-width (used by the home
+                              page, which supplies its own full-bleed
+                              sections via shortcodes: {{< hero-slider >}},
+                              {{< opening-hours >}}, {{< testimonials >}}, ...)
+    hide_sidebar:   true   - skip the "get in touch" sidebar (still keeps
+                              the standard title banner and wrap container)
+    eyebrow:        "..."  - override the small label above the <h1>
+*/ -}}
+{{ define "main" }}
+{{ if .Params.hide_page_hero }}
+  {{ .Content }}
+{{ else }}
+<section class="page-hero">
+  <div class="wrap">
+    <p class="eyebrow">{{ if .Params.eyebrow }}{{ .Params.eyebrow }}{{ else if .Parent }}<a href="{{ .Parent.RelPermalink }}">{{ .Parent.Title }}</a>{{ end }}</p>
+    <h1>{{ .Title }}</h1>
+    {{ if eq .Section "blog" }}<time class="post-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>{{ end }}
+  </div>
+</section>
+
+<div class="divider divider-small" aria-hidden="true">
+  <svg viewBox="0 0 1200 40" preserveAspectRatio="none"><path d="M0 20 C 150 0, 300 40, 450 20 S 750 0, 900 20 S 1150 40, 1200 20" /></svg>
+</div>
+
+<section class="section">
+  <div class="wrap{{ if not .Params.hide_sidebar }} article-layout{{ end }}">
+    <article class="article-content">
+      {{ .Content }}
+      {{ if eq .Section "blog" }}<p class="back-link"><a href="/blog/">&larr; Back to all posts</a></p>{{ end }}
+    </article>
+    {{ if not .Params.hide_sidebar }}{{ partial "global/sidebar.html" . }}{{ end }}
+  </div>
+</section>
+{{ end }}
+{{ end }}

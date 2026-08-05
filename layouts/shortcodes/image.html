@@ -1,0 +1,3 @@
+{{- /* General content image. Usage: {{< image src="article_images/Monika.jpg" alt="Monika Wiesenthal" >}} */ -}}
+{{- $class := .Get "class" | default "content-image" -}}
+{{ partial "global/image.html" (dict "src" (.Get "src") "alt" (.Get "alt") "class" $class "sizes" (.Get "sizes")) }}

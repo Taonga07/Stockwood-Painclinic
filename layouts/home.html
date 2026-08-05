@@ -1,0 +1,10 @@
+{{- /*
+  Hugo's template lookup for the home page always checks for index.html/home.html
+  before falling back to _default/list.html — it never falls back to
+  _default/single.html on its own. This file is a deliberate thin pass-through
+  so the home page still uses the one generic single-page layout/shortcode
+  approach: all actual markup lives in _default/single.html (shared baseof,
+  header, footer) and the home page's real content is authored entirely as
+  shortcodes in content/pages/_index.md.
+*/ -}}
+{{ define "main" }}{{ .Content }}{{ end }}
