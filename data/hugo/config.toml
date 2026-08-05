@@ -1,6 +1,5 @@
-title = "Monika Wiesenthal Osteopath"
-baseURL = "https://monika-osteopath.co.uk/"
-
-locale= "en-gb"
+title = "Stockwood Pain Clinic"
+baseURL = "https://stockwood-painclinic.co.uk/"
 
 disableKinds = ["taxonomy", "term"]
+locale= "en-gb"

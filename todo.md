@@ -9,3 +9,4 @@
 - tina cms should be done in json and split up into separate collections
 - hugo shoul dbe done in json and split up into separate collections
 - media should be processed and optimized for the website
+- ediatble data with tinacms

@@ -1,0 +1,13 @@
+{
+  "name": "settings",
+  "label": "Settings",
+  "path": "assets",
+  "format": "json",
+  "fields": [
+    {
+      "type": "string",
+      "name": "site_title",
+      "label": "Site Title"
+    }
+  ]
+}

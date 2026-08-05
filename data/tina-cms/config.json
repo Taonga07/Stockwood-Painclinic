@@ -1,0 +1,22 @@
+{
+  "branch": "main",
+  "clientId": "YOUR_TINA_CLIENT_ID",
+  "token": "YOUR_TINA_TOKEN",
+  "build": {
+    "outputFolder": "cms",
+    "publicFolder": "static"
+  },
+  "media": {
+    "tina": {
+      "mediaRoot": "uploads",
+      "publicFolder": "static"
+    }
+  },
+  "schema": {
+    "collections": [
+      "./schema/posts.json",
+      "./schema/pages.json",
+      "./schema/settings.json"
+    ]
+  }
+}

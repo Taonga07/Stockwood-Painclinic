@@ -11,3 +11,6 @@ module:
 
     - source: content/data
       target: data
+
+    - source: data/tina-cms
+      target: tina
