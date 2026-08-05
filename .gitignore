@@ -1,7 +1,6 @@
 public/
 resources/
 .hugo_build.lock
-
 node_modules
 .env
-tina/__generated__
+tina-cms/__generated__

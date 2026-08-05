@@ -1,0 +1,13 @@
+module:
+  mounts:
+    - source: content/pages
+      target: content
+
+    - source: content/post
+      target: content/blog
+
+    - source: media
+      target: assets/media    # Enables Hugo Pipes image processing via resources.Get
+
+    - source: content/data
+      target: data

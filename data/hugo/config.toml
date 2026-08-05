@@ -1,0 +1,6 @@
+title = "Monika Wiesenthal Osteopath"
+baseURL = "https://monika-osteopath.co.uk/"
+
+locale= "en-gb"
+
+disableKinds = ["taxonomy", "term"]
