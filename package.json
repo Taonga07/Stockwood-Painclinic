@@ -2,7 +2,7 @@
   "name": "my-tinacms-app",
   "private": true,
   "scripts": {
-    "dev": "tinacms dev -c \"hugo server -D --config data/settings.toml\"",
+    "dev": "tinacms dev -c \"hugo server -D --config data/settings.toml\" ",
     "build": "tinacms build && hugo --minify --config data/settings.toml"
   },
   "dependencies": {

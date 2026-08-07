@@ -169,7 +169,13 @@ var pages_default = {
         {
           name: "booking",
           label: "Online Booking Widget",
-          fields: []
+          fields: [
+            {
+              type: "boolean",
+              name: "enabled",
+              label: "Enable Widget"
+            }
+          ]
         }
       ]
     }
@@ -209,13 +215,12 @@ var posts_default = {
 var configuration_default = {
   name: "configuration",
   label: "Configuration",
-  path: "data/config",
-  format: "json",
+  path: "../../data",
   templates: [
     {
       name: "contact",
       label: "Contact Details",
-      match: { include: "contact" },
+      match: { include: "**/contact.{json,yml,yaml,toml}" },
       fields: [
         { type: "string", name: "phone", label: "Phone (display)", required: true },
         { type: "string", name: "phone_href", label: "Phone (tel: link)", required: true },
@@ -228,7 +233,7 @@ var configuration_default = {
     {
       name: "openingHours",
       label: "Opening Hours",
-      match: { include: "opening_hours" },
+      match: { include: "**/opening_hours.{json,yml,yaml,toml}" },
       fields: [
         {
           type: "object",
@@ -246,7 +251,7 @@ var configuration_default = {
     {
       name: "testimonials",
       label: "Testimonials",
-      match: { include: "testimonials" },
+      match: { include: "**/testimonials.{json,yml,yaml,toml}" },
       fields: [
         {
           type: "object",
@@ -264,7 +269,7 @@ var configuration_default = {
     {
       name: "pricing",
       label: "Price List",
-      match: { include: "pricing" },
+      match: { include: "**/pricing.{json,yml,yaml,toml}" },
       fields: [
         {
           type: "object",
@@ -283,7 +288,7 @@ var configuration_default = {
     {
       name: "style",
       label: "Site Style",
-      match: { include: "style" },
+      match: { include: "**/style.{json,yml,yaml,toml}" },
       fields: [
         {
           type: "object",

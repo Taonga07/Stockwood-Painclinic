@@ -319,7 +319,9 @@ export type PagesBodyImageFilter = {
   alt?: InputMaybe<StringFilter>;
 };
 
-export type PagesBodyBookingFilter = {};
+export type PagesBodyBookingFilter = {
+  enabled?: InputMaybe<BooleanFilter>;
+};
 
 export type PagesBodyFilter = {
   hero_slider?: InputMaybe<PagesBodyHero_SliderFilter>;

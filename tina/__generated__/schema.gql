@@ -210,7 +210,9 @@ input PagesBodyImageFilter {
   alt: StringFilter
 }
 
-input PagesBodyBookingFilter
+input PagesBodyBookingFilter {
+  enabled: BooleanFilter
+}
 
 input PagesBodyFilter {
   hero_slider: PagesBodyHero_sliderFilter

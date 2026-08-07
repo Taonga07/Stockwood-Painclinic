@@ -151,7 +151,13 @@
         {
           "name": "booking",
           "label": "Online Booking Widget",
-          "fields": []
+          "fields": [
+            {
+                  "type": "boolean",
+                  "name": "enabled",
+                  "label": "Enable Widget"
+                }
+          ]
         }
       ]
     }
