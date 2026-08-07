@@ -6,10 +6,10 @@ import { defineConfig } from "tinacms";
 // Function + Upstash Redis) to read without parsing TypeScript. This file
 // is just the real Tina entry point that wires that JSON up — secrets
 // (client ID / token) stay in .env, never in the committed JSON.
-import settings from "../assets/tina/settings.json";
-import pages from "../assets/tina/schema/pages.json";
-import posts from "../assets/tina/schema/posts.json";
-import configuration from "../assets/tina/schema/configuration.json";
+import settings from "../data/tina/settings.json";
+import pages from "../data/tina/schema/pages.json";
+import posts from "../data/tina/schema/posts.json";
+import configuration from "../data/tina/schema/configuration.json";
 
 export default defineConfig({
   branch: process.env.GITHUB_BRANCH || "main",
