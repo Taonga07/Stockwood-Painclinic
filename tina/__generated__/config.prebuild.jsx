@@ -34,7 +34,7 @@ var pages_default = {
       isBody: true,
       templates: [
         {
-          name: "hero-slider",
+          name: "hero_slider",
           label: "Hero Slider (home page banner)",
           fields: [
             {
@@ -54,7 +54,7 @@ var pages_default = {
           ]
         },
         {
-          name: "welcome-intro",
+          name: "welcome_intro",
           label: "Welcome / Intro Section",
           fields: [
             { type: "image", name: "image", label: "Photo" },
@@ -65,7 +65,7 @@ var pages_default = {
           ]
         },
         {
-          name: "opening-hours",
+          name: "opening_hours",
           label: "Opening Hours Table",
           fields: [
             { type: "string", name: "title", label: "Eyebrow label" },
@@ -104,7 +104,7 @@ var pages_default = {
           ]
         },
         {
-          name: "price-table",
+          name: "price_table",
           label: "Price Table",
           fields: [
             {

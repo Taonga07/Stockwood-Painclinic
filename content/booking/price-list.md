@@ -3,4 +3,4 @@ title: "Price List"
 eyebrow: "Booking"
 ---
 
-{{< price-table >}}{{< /price-table >}}
+{{< price_table >}}{{< /price_table >}}

@@ -1,0 +1,75 @@
+fragment PagesParts on Pages {
+  __typename
+  title
+  eyebrow
+  hide_page_hero
+  hide_sidebar
+  body
+}
+
+fragment PostsParts on Posts {
+  __typename
+  title
+  date
+  body
+}
+
+fragment ConfigurationParts on Configuration {
+  __typename
+  ... on ConfigurationContact {
+    phone
+    phone_href
+    email
+    address1
+    address2
+    site_description
+  }
+  ... on ConfigurationOpeningHours {
+    hours {
+      __typename
+      day
+      hours
+    }
+  }
+  ... on ConfigurationTestimonials {
+    items {
+      __typename
+      quote
+      author
+    }
+  }
+  ... on ConfigurationPricing {
+    plans {
+      __typename
+      name
+      price
+      features
+    }
+  }
+  ... on ConfigurationStyle {
+    colors {
+      __typename
+      paper
+      paper_deep
+      white
+      ink
+      ink_soft
+      sage
+      sage_deep
+      sage_pale
+      brass
+      brass_deep
+      line
+    }
+    typography {
+      __typename
+      font_display
+      font_body
+    }
+    layout {
+      __typename
+      wrap_width
+      radius
+    }
+  }
+}

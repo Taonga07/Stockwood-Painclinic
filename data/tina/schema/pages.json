@@ -16,7 +16,7 @@
       "isBody": true,
       "templates": [
         {
-          "name": "hero-slider",
+          "name": "hero_slider",
           "label": "Hero Slider (home page banner)",
           "fields": [
             {
@@ -36,7 +36,7 @@
           ]
         },
         {
-          "name": "welcome-intro",
+          "name": "welcome_intro",
           "label": "Welcome / Intro Section",
           "fields": [
             { "type": "image", "name": "image", "label": "Photo" },
@@ -47,7 +47,7 @@
           ]
         },
         {
-          "name": "opening-hours",
+          "name": "opening_hours",
           "label": "Opening Hours Table",
           "fields": [
             { "type": "string", "name": "title", "label": "Eyebrow label" },
@@ -86,7 +86,7 @@
           ]
         },
         {
-          "name": "price-table",
+          "name": "price_table",
           "label": "Price Table",
           "fields": [
             {
