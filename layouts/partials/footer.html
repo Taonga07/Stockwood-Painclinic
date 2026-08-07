@@ -1,11 +1,11 @@
 <footer class="site-footer">
   <div class="wrap footer-grid">
     <div class="footer-col">
-      {{ partial "global/brand.html" (dict "showText" false "size" 30) }}
+      {{ partial "brand.html" (dict "showText" false "size" 30) }}
       <p class="footer-tagline">Osteopathic care for babies through to golden years, in the heart of Stockwood, Bristol.</p>
     </div>
 
-    {{ $contact := site.Data.configuraton.contact }}
+    {{ $contact := hugo.Data.config.contact }}
     <div class="footer-col">
       <h3>Contact</h3>
       <p><a href="{{ $contact.phone_href | safeURL }}">{{ $contact.phone }}</a></p>
@@ -30,7 +30,7 @@
 
   {{ if .Page.Store.Get "load_booking_script" }}
     {{ $opts := dict "minify" true "target" "es2015" }}
-    {{ $js := resources.Get "js/booking.js" | js.Build $opts | resources.Minify | resources.Fingerprint }}
+    {{ $js := resources.Get "script/booking.js" | js.Build $opts | resources.Minify | resources.Fingerprint }}
     <script type="text/javascript" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
   {{ end }}
 

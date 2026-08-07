@@ -5,10 +5,10 @@ hide_sidebar: true
 ---
 
 {{< hero-slider >}}
-{{< hero-slide image="banners/SportInjury.jpg" heading="Suffering from a sports injury?" text="Find out how osteopathy can help" link="/osteopathy/sport-injury/" >}}{{< /hero-slide >}}
-{{< hero-slide image="banners/GoldenYears.jpg" heading="Looking after yourself in your 'Golden Years'" text="Osteopathy could help" link="/osteopathy/golden-years/" >}}{{< /hero-slide >}}
-{{< hero-slide image="banners/Chilren.jpg" heading="Babies through to Adults" text="Find out how osteopathy can help you and your family" link="/osteopathy/what-is-osteopathy/" >}}{{< /hero-slide >}}
-{{< hero-slide image="banners/PregnancyBanner.jpg" heading="Pregnancy" link="/osteopathy/pregnancy/" >}}{{< /hero-slide >}}
+{{< hero-slide image="banners/SportInjury.jpg" heading="Suffering from a sports injury?" text="Find out how osteopathy can help" link="/osteopathy/sport-injury/" />}}
+{{< hero-slide image="banners/GoldenYears.jpg" heading="Looking after yourself in your 'Golden Years'" text="Osteopathy could help" link="/osteopathy/golden-years/" />}}
+{{< hero-slide image="banners/Chilren.jpg" heading="Babies through to Adults" text="Find out how osteopathy can help you and your family" link="/osteopathy/what-is-osteopathy/" />}}
+{{< hero-slide image="banners/PregnancyBanner.jpg" heading="Pregnancy" link="/osteopathy/pregnancy/" />}}
 {{< /hero-slider >}}
 
 {{< welcome-intro image="article_images/Monika.jpg" heading="Welcome to Monika Wiesenthal's Osteopathic Practice" lede="Osteopath and Sports Injuries Therapist" >}}

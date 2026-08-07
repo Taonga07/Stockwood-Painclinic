@@ -1,6 +1,7 @@
 {{- /* One clinic inside {{< clinics >}}. Params: name, image, link */ -}}
 {{- $link := .Get "link" -}}
 <div class="clinic-card">
-  <a href="{{ $link }}">{{ partial "global/image.html" (dict "src" (.Get "image") "alt" (.Get "name") "widths" (slice 400 600)) }}</a>
+  <a href="{{ $link }}">{{ partial "image.html" (dict "src" (.Get "image") "alt" (.Get "name") "widths" (slice 400 600)) }}</a>
   <h3><a href="{{ $link }}">{{ .Get "name" }}</a></h3>
 </div>
+{{ .Inner }}

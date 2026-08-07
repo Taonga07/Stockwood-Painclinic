@@ -1,7 +1,7 @@
 {
   "name": "posts",
   "label": "Blog Posts",
-  "path": "content/posts",
+  "path": "content/blog",
   "format": "md",
   "fields": [
     { "type": "string", "name": "title", "label": "Title", "isTitle": true, "required": true },

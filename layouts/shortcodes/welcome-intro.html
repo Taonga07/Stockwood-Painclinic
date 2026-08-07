@@ -1,9 +1,9 @@
 {{- /* Homepage "welcome" section: photo + intro copy + CTAs. Params: image, eyebrow, heading, lede. Inner: markdown body copy. */ -}}
-{{- $contact := site.Data.configuraton.contact -}}
+{{- $contact := hugo.Data.config.contact -}}
 <section class="section intro-section">
   <div class="wrap intro-grid">
     <div class="intro-image">
-      {{ partial "global/image.html" (dict "src" (.Get "image") "alt" (.Get "heading") "widths" (slice 480 720 1000)) }}
+      {{ partial "image.html" (dict "src" (.Get "image") "alt" (.Get "heading") "widths" (slice 480 720 1000)) }}
     </div>
     <div class="intro-copy">
       <p class="eyebrow">{{ .Get "eyebrow" | default "Welcome" }}</p>

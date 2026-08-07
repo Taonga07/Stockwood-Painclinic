@@ -1,9 +1,9 @@
 {
   "name": "pages",
   "label": "Pages",
-  "path": "content/pages",
+  "path": "content",
   "format": "md",
-  "match": { "exclude": "" },
+  "match": { "exclude": "blog/**" },
   "fields": [
     { "type": "string", "name": "title", "label": "Title", "isTitle": true, "required": true },
     { "type": "string", "name": "eyebrow", "label": "Eyebrow label (above the title)" },

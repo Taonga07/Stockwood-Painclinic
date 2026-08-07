@@ -1,0 +1,17 @@
+// =========================================================
+// SETTINGS / TYPOGRAPHY
+// Swap these to change fonts site-wide. If you change the
+// font family here, also update the Google Fonts <link> in
+// layouts/partials/global/head.html to match.
+//
+// Values come from data/config/style.json (edited via the
+// Tina "configuration" collection), passed in through Hugo's
+// documented css.Sass "vars" option — see
+// layouts/partials/global/head.html.
+// https://gohugo.io/functions/css/sass/#vars
+// =========================================================
+
+@use "hugo:vars" as v;
+
+$font-display: v.$font-display;
+$font-body:    v.$font-body;

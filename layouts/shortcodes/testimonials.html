@@ -7,7 +7,7 @@
     <h2 class="on-dark">{{ $heading }}</h2>
     <div class="testimonial-grid">
       {{ if .Inner }}{{ .Inner }}{{ else }}
-        {{ range site.Data.configuraton.testimonials.items }}
+        {{ range hugo.Data.config.testimonials.items }}
         <blockquote class="testimonial-card"><p>&ldquo;{{ .quote }}&rdquo;</p><cite>{{ .author }}</cite></blockquote>
         {{ end }}
       {{ end }}

@@ -1,0 +1,35 @@
+// =========================================================
+// SETTINGS / COLORS
+// This is the main "slot" to edit if you want to re-theme
+// the site — change these values and everything (header,
+// buttons, cards, footer, hero overlay) updates with it.
+//
+// Values come from data/config/style.json (edited via the
+// Tina "configuration" collection), passed in through Hugo's
+// documented css.Sass "vars" option — see
+// layouts/partials/global/head.html.
+// https://gohugo.io/functions/css/sass/#vars
+// =========================================================
+
+@use "hugo:vars" as v;
+
+// Paper / surfaces
+$paper:       v.$paper;
+$paper-deep:  v.$paper-deep;
+$white:       v.$white;
+
+// Text / ink
+$ink:         v.$ink;
+$ink-soft:    v.$ink-soft;
+
+// Brand — sage (primary)
+$sage:        v.$sage;
+$sage-deep:   v.$sage-deep;
+$sage-pale:   v.$sage-pale;
+
+// Brand — brass (accent)
+$brass:       v.$brass;
+$brass-deep:  v.$brass-deep;
+
+// Lines / borders
+$line:        v.$line;

@@ -1,0 +1,14 @@
+// =========================================================
+// SETTINGS / SPACING & SIZING
+//
+// Values come from data/config/style.json (edited via the
+// Tina "configuration" collection), passed in through Hugo's
+// documented css.Sass "vars" option — see
+// layouts/partials/global/head.html.
+// https://gohugo.io/functions/css/sass/#vars
+// =========================================================
+
+@use "hugo:vars" as v;
+
+$wrap-width: v.$wrap-width;
+$radius:     v.$radius;

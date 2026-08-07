@@ -3,5 +3,4 @@ resources/
 .hugo_build.lock
 node_modules
 .env
-tina-cms/__generated__
-go.mod
+static/cms

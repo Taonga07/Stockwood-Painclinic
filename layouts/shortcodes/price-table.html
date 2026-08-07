@@ -1,7 +1,7 @@
 {{- /* Wrapper for pricing plans. Children: price-plan. Falls back to site data if empty. */ -}}
 <div class="price-grid">
   {{ if .Inner }}{{ .Inner }}{{ else }}
-    {{ range site.Data.configuraton.pricing.plans }}
+    {{ range hugo.Data.config.pricing.plans }}
     <div class="price-card">
       <h3>{{ .name }}</h3>
       <p class="price">{{ .price }}</p>

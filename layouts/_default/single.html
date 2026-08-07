@@ -3,7 +3,7 @@
   find-us, osteopathy pages, articles, etc). Page-specific content — hero
   sliders, pricing tables, opening hours, maps, testimonials — is authored as
   shortcodes inside the page body (.Content) rather than as separate
-  per-section layout templates. See theme/layouts/shortcodes/.
+  per-section layout templates. See layouts/shortcodes/.
 
   Front matter switches:
     hide_page_hero: true   - skip the standard title banner AND the
@@ -38,7 +38,7 @@
       {{ .Content }}
       {{ if eq .Section "blog" }}<p class="back-link"><a href="/blog/">&larr; Back to all posts</a></p>{{ end }}
     </article>
-    {{ if not .Params.hide_sidebar }}{{ partial "global/sidebar.html" . }}{{ end }}
+    {{ if not .Params.hide_sidebar }}{{ partial "sidebar.html" . }}{{ end }}
   </div>
 </section>
 {{ end }}
