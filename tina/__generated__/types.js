@@ -84,6 +84,33 @@ export const ConfigurationPartsFragmentDoc = gql`
   }
 }
     `;
+export const SiteSettingsPartsFragmentDoc = gql`
+    fragment SiteSettingsParts on SiteSettings {
+  __typename
+  title
+  baseURL
+  languageCode
+  enableRobotsTXT
+  summarylength
+  params {
+    __typename
+    favicon
+  }
+}
+    `;
+export const MenuPartsFragmentDoc = gql`
+    fragment MenuParts on Menu {
+  __typename
+  main {
+    __typename
+    name
+    pageRef
+    url
+    parent
+    weight
+  }
+}
+    `;
 export const PagesDocument = gql`
     query pages($relativePath: String!) {
   pages(relativePath: $relativePath) {
@@ -255,6 +282,120 @@ export const ConfigurationConnectionDocument = gql`
   }
 }
     ${ConfigurationPartsFragmentDoc}`;
+export const SiteSettingsDocument = gql`
+    query siteSettings($relativePath: String!) {
+  siteSettings(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...SiteSettingsParts
+  }
+}
+    ${SiteSettingsPartsFragmentDoc}`;
+export const SiteSettingsConnectionDocument = gql`
+    query siteSettingsConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: SiteSettingsFilter) {
+  siteSettingsConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...SiteSettingsParts
+      }
+    }
+  }
+}
+    ${SiteSettingsPartsFragmentDoc}`;
+export const MenuDocument = gql`
+    query menu($relativePath: String!) {
+  menu(relativePath: $relativePath) {
+    ... on Document {
+      _sys {
+        filename
+        basename
+        hasReferences
+        breadcrumbs
+        path
+        relativePath
+        extension
+      }
+      id
+    }
+    ...MenuParts
+  }
+}
+    ${MenuPartsFragmentDoc}`;
+export const MenuConnectionDocument = gql`
+    query menuConnection($before: String, $after: String, $first: Float, $last: Float, $sort: String, $filter: MenuFilter) {
+  menuConnection(
+    before: $before
+    after: $after
+    first: $first
+    last: $last
+    sort: $sort
+    filter: $filter
+  ) {
+    pageInfo {
+      hasPreviousPage
+      hasNextPage
+      startCursor
+      endCursor
+    }
+    totalCount
+    edges {
+      cursor
+      node {
+        ... on Document {
+          _sys {
+            filename
+            basename
+            hasReferences
+            breadcrumbs
+            path
+            relativePath
+            extension
+          }
+          id
+        }
+        ...MenuParts
+      }
+    }
+  }
+}
+    ${MenuPartsFragmentDoc}`;
 export function getSdk(requester) {
   return {
     pages(variables, options) {
@@ -274,6 +415,18 @@ export function getSdk(requester) {
     },
     configurationConnection(variables, options) {
       return requester(ConfigurationConnectionDocument, variables, options);
+    },
+    siteSettings(variables, options) {
+      return requester(SiteSettingsDocument, variables, options);
+    },
+    siteSettingsConnection(variables, options) {
+      return requester(SiteSettingsConnectionDocument, variables, options);
+    },
+    menu(variables, options) {
+      return requester(MenuDocument, variables, options);
+    },
+    menuConnection(variables, options) {
+      return requester(MenuConnectionDocument, variables, options);
     }
   };
 }

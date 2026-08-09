@@ -8,7 +8,7 @@
     <table class="hours-table">
       <tbody>
         {{ if .Inner }}{{ .Inner }}{{ else }}
-          {{ range hugo.Data.config.opening_hours.hours }}
+          {{ range site.Data.config.opening_hours.hours }}
           <tr><th>{{ .day }}</th><td>{{ .hours }}</td></tr>
           {{ end }}
         {{ end }}

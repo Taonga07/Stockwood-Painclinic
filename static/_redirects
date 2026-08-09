@@ -1,0 +1,6 @@
+# 1. Serve TinaCMS admin content ONLY on the admin subdomain
+https://www.admin.stockwoodpainclinic.co.uk/* /tina_cms/:splat 200
+
+# 2. Block /admin and /tina_cms on the main website with a 404
+https://www.stockwoodpainclinic.co.uk/admin/* /404 404
+https://www.stockwoodpainclinic.co.uk/tina_cms/* /404 404

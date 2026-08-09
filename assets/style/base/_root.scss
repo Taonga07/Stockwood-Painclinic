@@ -23,4 +23,15 @@
 
   --wrap: #{$wrap-width};
   --radius: #{$radius};
+
+  // Consistent elevation system — used for cards, dropdowns, and hover
+  // states so "lift" always reads the same weight across the site.
+  --shadow-sm: 0 2px 8px rgba(30, 42, 34, 0.06);
+  --shadow-md: 0 10px 24px rgba(30, 42, 34, 0.10);
+  --shadow-lg: 0 16px 40px rgba(30, 42, 34, 0.16);
+
+  // Shared motion curve — a slight overshoot-free ease-out reads as
+  // more premium than the browser's default "ease".
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
+

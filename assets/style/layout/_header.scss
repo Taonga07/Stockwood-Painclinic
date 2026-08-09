@@ -7,7 +7,7 @@
   top: 0;
   z-index: 100;
   background: var(--paper);
-  border-bottom: 1px solid var(--line);
+  box-shadow: 0 1px 0 var(--line), var(--shadow-sm);
 }
 
 .topbar {
@@ -73,6 +73,7 @@
     font-weight: 600;
     font-size: 0.94rem;
     border-radius: var(--radius);
+    transition: background 0.2s var(--ease), color 0.2s var(--ease);
 
     &:hover,
     &[aria-current="page"] {
@@ -83,7 +84,6 @@
 }
 
 .sub-nav {
-  display: none;
   position: absolute;
   left: 0;
   top: 100%;
@@ -91,9 +91,13 @@
   border: 1px solid var(--line);
   border-radius: var(--radius);
   min-width: 220px;
-  box-shadow: 0 8px 24px rgba(30, 42, 34, 0.12);
+  box-shadow: var(--shadow-lg);
   padding: 6px;
   z-index: 50;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.18s var(--ease), transform 0.18s var(--ease), visibility 0.18s;
 
   li a {
     display: block;
@@ -101,13 +105,14 @@
     font-size: 0.9rem;
     border-radius: 4px;
     color: var(--ink-soft);
+    transition: background 0.15s var(--ease), color 0.15s var(--ease);
 
     &:hover { background: var(--sage-pale); color: var(--sage-deep); }
   }
 }
 
 .has-children:hover .sub-nav,
-.has-children:focus-within .sub-nav { display: block; }
+.has-children:focus-within .sub-nav { opacity: 1; visibility: visible; transform: translateY(0); }
 
 .nav-toggle {
   display: none;
@@ -151,6 +156,9 @@
     box-shadow: none;
     border: none;
     padding-left: 12px;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
   }
 
   .has-children.is-open .sub-nav { display: block; }

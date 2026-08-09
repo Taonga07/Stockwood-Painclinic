@@ -13,6 +13,9 @@
   border-radius: var(--radius);
   padding: 28px;
   text-align: center;
+  transition: box-shadow 0.25s var(--ease), transform 0.25s var(--ease);
+
+  &:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
 
   .price {
     font-family: var(--font-display);

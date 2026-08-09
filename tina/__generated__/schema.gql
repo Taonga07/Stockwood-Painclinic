@@ -60,12 +60,18 @@ type Query {
   postsConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: PostsFilter): PostsConnection!
   configuration(relativePath: String): Configuration!
   configurationConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: ConfigurationFilter): ConfigurationConnection!
+  siteSettings(relativePath: String): SiteSettings!
+  siteSettingsConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: SiteSettingsFilter): SiteSettingsConnection!
+  menu(relativePath: String): Menu!
+  menuConnection(before: String, after: String, first: Float, last: Float, sort: String, filter: MenuFilter): MenuConnection!
 }
 
 input DocumentFilter {
   pages: PagesFilter
   posts: PostsFilter
   configuration: ConfigurationFilter
+  siteSettings: SiteSettingsFilter
+  menu: MenuFilter
 }
 
 type DocumentConnectionEdges {
@@ -91,7 +97,7 @@ type Collection {
   documents(before: String, after: String, first: Float, last: Float, sort: String, filter: DocumentFilter, folder: String): DocumentConnection!
 }
 
-union DocumentNode = Pages | Posts | ConfigurationContact | ConfigurationOpeningHours | ConfigurationTestimonials | ConfigurationPricing | ConfigurationStyle | Folder
+union DocumentNode = Pages | Posts | ConfigurationContact | ConfigurationOpeningHours | ConfigurationTestimonials | ConfigurationPricing | ConfigurationStyle | SiteSettings | Menu | Folder
 
 type Pages implements Node & Document {
   title: String!
@@ -123,22 +129,27 @@ input ImageFilter {
   in: [String]
 }
 
-input PagesBodyHero_sliderSlidesFilter {
+input RichTextFilter {
+  startsWith: String
+  eq: String
+  exists: Boolean
+}
+
+input PagesBodyHero_sliderChildrenHero_slideFilter {
   image: ImageFilter
   heading: StringFilter
   text: StringFilter
   link: StringFilter
   link_text: StringFilter
+  children: RichTextFilter
+}
+
+input PagesBodyHero_sliderChildrenFilter {
+  hero_slide: PagesBodyHero_sliderChildrenHero_slideFilter
 }
 
 input PagesBodyHero_sliderFilter {
-  slides: PagesBodyHero_sliderSlidesFilter
-}
-
-input RichTextFilter {
-  startsWith: String
-  eq: String
-  exists: Boolean
+  children: PagesBodyHero_sliderChildrenFilter
 }
 
 input PagesBodyWelcome_introFilter {
@@ -149,30 +160,38 @@ input PagesBodyWelcome_introFilter {
   children: RichTextFilter
 }
 
-input PagesBodyOpening_hoursRowsFilter {
+input PagesBodyOpening_hoursChildrenOpening_hours_rowFilter {
   day: StringFilter
   hours: StringFilter
+}
+
+input PagesBodyOpening_hoursChildrenFilter {
+  opening_hours_row: PagesBodyOpening_hoursChildrenOpening_hours_rowFilter
 }
 
 input PagesBodyOpening_hoursFilter {
   title: StringFilter
   subtitle: StringFilter
-  rows: PagesBodyOpening_hoursRowsFilter
+  children: PagesBodyOpening_hoursChildrenFilter
 }
 
-input PagesBodyTestimonialsQuotesFilter {
-  children: RichTextFilter
+input PagesBodyTestimonialsChildrenTestimonialFilter {
   author: StringFilter
+  children: RichTextFilter
+}
+
+input PagesBodyTestimonialsChildrenFilter {
+  testimonial: PagesBodyTestimonialsChildrenTestimonialFilter
 }
 
 input PagesBodyTestimonialsFilter {
   title: StringFilter
   heading: StringFilter
   note: StringFilter
-  quotes: PagesBodyTestimonialsQuotesFilter
+  children: PagesBodyTestimonialsChildrenFilter
 }
 
-input PagesBodyPrice_tablePlansFilter {
+input PagesBodyPrice_tableChildrenPrice_planFilter {
   name: StringFilter
   price: StringFilter
   cta_text: StringFilter
@@ -180,18 +199,27 @@ input PagesBodyPrice_tablePlansFilter {
   children: RichTextFilter
 }
 
-input PagesBodyPrice_tableFilter {
-  plans: PagesBodyPrice_tablePlansFilter
+input PagesBodyPrice_tableChildrenFilter {
+  price_plan: PagesBodyPrice_tableChildrenPrice_planFilter
 }
 
-input PagesBodyClinicsLocationsFilter {
+input PagesBodyPrice_tableFilter {
+  children: PagesBodyPrice_tableChildrenFilter
+}
+
+input PagesBodyClinicsChildrenClinicFilter {
   name: StringFilter
   image: ImageFilter
   link: StringFilter
+  children: RichTextFilter
+}
+
+input PagesBodyClinicsChildrenFilter {
+  clinic: PagesBodyClinicsChildrenClinicFilter
 }
 
 input PagesBodyClinicsFilter {
-  locations: PagesBodyClinicsLocationsFilter
+  children: PagesBodyClinicsChildrenFilter
 }
 
 input PagesBodyMapFilter {
@@ -466,6 +494,94 @@ type ConfigurationConnection implements Connection {
   edges: [ConfigurationConnectionEdges]
 }
 
+type SiteSettingsParams {
+  favicon: String
+}
+
+type SiteSettings implements Node & Document {
+  title: String!
+  baseURL: String!
+  languageCode: String
+  enableRobotsTXT: Boolean
+  summarylength: Float
+  params: SiteSettingsParams
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input NumberFilter {
+  lt: Float
+  lte: Float
+  gte: Float
+  gt: Float
+  eq: Float
+  exists: Boolean
+  in: [Float]
+}
+
+input SiteSettingsParamsFilter {
+  favicon: ImageFilter
+}
+
+input SiteSettingsFilter {
+  title: StringFilter
+  baseURL: StringFilter
+  languageCode: StringFilter
+  enableRobotsTXT: BooleanFilter
+  summarylength: NumberFilter
+  params: SiteSettingsParamsFilter
+}
+
+type SiteSettingsConnectionEdges {
+  cursor: String!
+  node: SiteSettings
+}
+
+type SiteSettingsConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [SiteSettingsConnectionEdges]
+}
+
+type MenuMain {
+  name: String!
+  pageRef: String
+  url: String
+  parent: String
+  weight: Float
+}
+
+type Menu implements Node & Document {
+  main: [MenuMain]
+  id: ID!
+  _sys: SystemInfo!
+  _values: JSON!
+}
+
+input MenuMainFilter {
+  name: StringFilter
+  pageRef: StringFilter
+  url: StringFilter
+  parent: StringFilter
+  weight: NumberFilter
+}
+
+input MenuFilter {
+  main: MenuMainFilter
+}
+
+type MenuConnectionEdges {
+  cursor: String!
+  node: Menu
+}
+
+type MenuConnection implements Connection {
+  pageInfo: PageInfo!
+  totalCount: Float!
+  edges: [MenuConnectionEdges]
+}
+
 type Mutation {
   addPendingDocument(collection: String!, relativePath: String!, template: String): DocumentNode!
   updateDocument(collection: String, relativePath: String!, params: DocumentUpdateMutation!): DocumentNode!
@@ -478,12 +594,18 @@ type Mutation {
   createPosts(relativePath: String!, params: PostsMutation!): Posts!
   updateConfiguration(relativePath: String!, params: ConfigurationMutation!): Configuration!
   createConfiguration(relativePath: String!, params: ConfigurationMutation!): Configuration!
+  updateSiteSettings(relativePath: String!, params: SiteSettingsMutation!): SiteSettings!
+  createSiteSettings(relativePath: String!, params: SiteSettingsMutation!): SiteSettings!
+  updateMenu(relativePath: String!, params: MenuMutation!): Menu!
+  createMenu(relativePath: String!, params: MenuMutation!): Menu!
 }
 
 input DocumentUpdateMutation {
   pages: PagesMutation
   posts: PostsMutation
   configuration: ConfigurationMutation
+  siteSettings: SiteSettingsMutation
+  menu: MenuMutation
   relativePath: String
 }
 
@@ -491,6 +613,8 @@ input DocumentMutation {
   pages: PagesMutation
   posts: PostsMutation
   configuration: ConfigurationMutation
+  siteSettings: SiteSettingsMutation
+  menu: MenuMutation
 }
 
 input PagesMutation {
@@ -580,6 +704,31 @@ input ConfigurationMutation {
   testimonials: ConfigurationTestimonialsMutation
   pricing: ConfigurationPricingMutation
   style: ConfigurationStyleMutation
+}
+
+input SiteSettingsParamsMutation {
+  favicon: String
+}
+
+input SiteSettingsMutation {
+  title: String
+  baseURL: String
+  languageCode: String
+  enableRobotsTXT: Boolean
+  summarylength: Float
+  params: SiteSettingsParamsMutation
+}
+
+input MenuMainMutation {
+  name: String
+  pageRef: String
+  url: String
+  parent: String
+  weight: Float
+}
+
+input MenuMutation {
+  main: [MenuMainMutation]
 }
 
 schema {

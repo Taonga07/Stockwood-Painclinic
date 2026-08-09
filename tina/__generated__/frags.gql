@@ -73,3 +73,28 @@ fragment ConfigurationParts on Configuration {
     }
   }
 }
+
+fragment SiteSettingsParts on SiteSettings {
+  __typename
+  title
+  baseURL
+  languageCode
+  enableRobotsTXT
+  summarylength
+  params {
+    __typename
+    favicon
+  }
+}
+
+fragment MenuParts on Menu {
+  __typename
+  main {
+    __typename
+    name
+    pageRef
+    url
+    parent
+    weight
+  }
+}

@@ -18,19 +18,26 @@
         {
           "name": "hero_slider",
           "label": "Hero Slider (home page banner)",
+          "match": { "start": "{{<", "end": ">}}" },
           "fields": [
             {
-              "type": "object",
-              "name": "slides",
+              "type": "rich-text",
+              "name": "children",
               "label": "Slides",
-              "list": true,
-              "ui": { "itemProps": { "label": "{{item.heading}}" } },
-              "fields": [
-                { "type": "image", "name": "image", "label": "Image" },
-                { "type": "string", "name": "heading", "label": "Heading" },
-                { "type": "string", "name": "text", "label": "Text" },
-                { "type": "string", "name": "link", "label": "Link" },
-                { "type": "string", "name": "link_text", "label": "Button text" }
+              "templates": [
+                {
+                  "name": "hero_slide",
+                  "label": "Slide",
+                  "match": { "start": "{{<", "end": ">}}" },
+                  "fields": [
+                    { "type": "image", "name": "image", "label": "Image" },
+                    { "type": "string", "name": "heading", "label": "Heading" },
+                    { "type": "string", "name": "text", "label": "Text" },
+                    { "type": "string", "name": "link", "label": "Link" },
+                    { "type": "string", "name": "link_text", "label": "Button text" },
+                    { "type": "rich-text", "name": "children", "label": "Extra notes (not used on the site)" }
+                  ]
+                }
               ]
             }
           ]
@@ -38,6 +45,7 @@
         {
           "name": "welcome_intro",
           "label": "Welcome / Intro Section",
+          "match": { "start": "{{<", "end": ">}}" },
           "fields": [
             { "type": "image", "name": "image", "label": "Photo" },
             { "type": "string", "name": "eyebrow", "label": "Eyebrow" },
@@ -49,18 +57,24 @@
         {
           "name": "opening_hours",
           "label": "Opening Hours Table",
+          "match": { "start": "{{<", "end": ">}}" },
           "fields": [
             { "type": "string", "name": "title", "label": "Eyebrow label" },
             { "type": "string", "name": "subtitle", "label": "Heading" },
             {
-              "type": "object",
-              "name": "rows",
+              "type": "rich-text",
+              "name": "children",
               "label": "Days (leave empty to use the sitewide Opening Hours settings)",
-              "list": true,
-              "ui": { "itemProps": { "label": "{{item.day}}" } },
-              "fields": [
-                { "type": "string", "name": "day", "label": "Day" },
-                { "type": "string", "name": "hours", "label": "Hours" }
+              "templates": [
+                {
+                  "name": "opening_hours_row",
+                  "label": "Day",
+                  "match": { "start": "{{<", "end": ">}}" },
+                  "fields": [
+                    { "type": "string", "name": "day", "label": "Day" },
+                    { "type": "string", "name": "hours", "label": "Hours" }
+                  ]
+                }
               ]
             }
           ]
@@ -68,19 +82,25 @@
         {
           "name": "testimonials",
           "label": "Testimonials Section",
+          "match": { "start": "{{<", "end": ">}}" },
           "fields": [
             { "type": "string", "name": "title", "label": "Eyebrow label" },
             { "type": "string", "name": "heading", "label": "Heading" },
             { "type": "string", "name": "note", "label": "Footnote" },
             {
-              "type": "object",
-              "name": "quotes",
+              "type": "rich-text",
+              "name": "children",
               "label": "Quotes (leave empty to use the sitewide Testimonials settings)",
-              "list": true,
-              "ui": { "itemProps": { "label": "{{item.author}}" } },
-              "fields": [
-                { "type": "rich-text", "name": "children", "label": "Quote" },
-                { "type": "string", "name": "author", "label": "Author" }
+              "templates": [
+                {
+                  "name": "testimonial",
+                  "label": "Quote",
+                  "match": { "start": "{{<", "end": ">}}" },
+                  "fields": [
+                    { "type": "string", "name": "author", "label": "Author" },
+                    { "type": "rich-text", "name": "children", "label": "Quote text" }
+                  ]
+                }
               ]
             }
           ]
@@ -88,19 +108,25 @@
         {
           "name": "price_table",
           "label": "Price Table",
+          "match": { "start": "{{<", "end": ">}}" },
           "fields": [
             {
-              "type": "object",
-              "name": "plans",
+              "type": "rich-text",
+              "name": "children",
               "label": "Plans (leave empty to use the sitewide Price List settings)",
-              "list": true,
-              "ui": { "itemProps": { "label": "{{item.name}}" } },
-              "fields": [
-                { "type": "string", "name": "name", "label": "Plan name" },
-                { "type": "string", "name": "price", "label": "Price" },
-                { "type": "string", "name": "cta_text", "label": "Button text" },
-                { "type": "string", "name": "cta_link", "label": "Button link" },
-                { "type": "rich-text", "name": "children", "label": "Features (bullet list)" }
+              "templates": [
+                {
+                  "name": "price_plan",
+                  "label": "Plan",
+                  "match": { "start": "{{<", "end": ">}}" },
+                  "fields": [
+                    { "type": "string", "name": "name", "label": "Plan name" },
+                    { "type": "string", "name": "price", "label": "Price" },
+                    { "type": "string", "name": "cta_text", "label": "Button text" },
+                    { "type": "string", "name": "cta_link", "label": "Button link" },
+                    { "type": "rich-text", "name": "children", "label": "Features (bullet list)" }
+                  ]
+                }
               ]
             }
           ]
@@ -108,17 +134,24 @@
         {
           "name": "clinics",
           "label": "Clinic Locations Grid",
+          "match": { "start": "{{<", "end": ">}}" },
           "fields": [
             {
-              "type": "object",
-              "name": "locations",
+              "type": "rich-text",
+              "name": "children",
               "label": "Clinics",
-              "list": true,
-              "ui": { "itemProps": { "label": "{{item.name}}" } },
-              "fields": [
-                { "type": "string", "name": "name", "label": "Name" },
-                { "type": "image", "name": "image", "label": "Photo" },
-                { "type": "string", "name": "link", "label": "Link" }
+              "templates": [
+                {
+                  "name": "clinic",
+                  "label": "Clinic",
+                  "match": { "start": "{{<", "end": ">}}" },
+                  "fields": [
+                    { "type": "string", "name": "name", "label": "Name" },
+                    { "type": "image", "name": "image", "label": "Photo" },
+                    { "type": "string", "name": "link", "label": "Link" },
+                    { "type": "rich-text", "name": "children", "label": "Extra notes (not used on the site)" }
+                  ]
+                }
               ]
             }
           ]
@@ -126,6 +159,7 @@
         {
           "name": "map",
           "label": "Embedded Map",
+          "match": { "start": "{{<", "end": ">}}" },
           "fields": [
             { "type": "string", "name": "embed_url", "label": "Google Maps embed URL" },
             { "type": "string", "name": "height", "label": "Height (px)" }
@@ -134,6 +168,7 @@
         {
           "name": "button",
           "label": "Button / Call to action",
+          "match": { "start": "{{<", "end": ">}}" },
           "fields": [
             { "type": "string", "name": "href", "label": "Link" },
             { "type": "string", "name": "style", "label": "Style", "options": ["primary", "outline", "light"] },
@@ -143,6 +178,7 @@
         {
           "name": "image",
           "label": "Content Image",
+          "match": { "start": "{{<", "end": ">}}" },
           "fields": [
             { "type": "image", "name": "src", "label": "Image" },
             { "type": "string", "name": "alt", "label": "Alt text" }
@@ -151,12 +187,13 @@
         {
           "name": "booking",
           "label": "Online Booking Widget",
+          "match": { "start": "{{<", "end": ">}}" },
           "fields": [
             {
-                  "type": "boolean",
-                  "name": "enabled",
-                  "label": "Enable Widget"
-                }
+              "type": "boolean",
+              "name": "enabled",
+              "label": "Enable Widget"
+            }
           ]
         }
       ]

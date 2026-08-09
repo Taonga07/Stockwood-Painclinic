@@ -18,7 +18,7 @@
 .intro-image {
   img {
     border-radius: var(--radius);
-    box-shadow: 0 12px 32px rgba(30, 42, 34, 0.12);
+    box-shadow: var(--shadow-lg);
   }
 
   @media (max-width: $bp-tablet) {

@@ -1,5 +1,0 @@
-title = "Stockwood Pain Clinic"
-baseURL = "https://stockwood-painclinic.co.uk/"
-
-disableKinds = ["taxonomy", "term"]
-locale= "en-gb"

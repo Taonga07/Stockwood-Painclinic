@@ -1,0 +1,49 @@
+{
+  "name": "menu",
+  "label": "Menu",
+  "path": "config/_default",
+  "format": "yaml",
+  "ui": {
+    "allowedActions": { "create": false, "delete": false }
+  },
+  "fields": [
+    {
+      "type": "object",
+      "name": "main",
+      "label": "Main Menu",
+      "description": "Controls the navigation bar shown at the top of every page. Drag to reorder within the same level — items with a Parent set appear as a dropdown under that parent.",
+      "list": true,
+      "ui": {
+        "itemProps": { "label": "{{item.name}}" },
+        "defaultItem": { "name": "New link", "pageRef": "/", "weight": 99 }
+      },
+      "fields": [
+        { "type": "string", "name": "name", "label": "Label", "required": true },
+        {
+          "type": "string",
+          "name": "pageRef",
+          "label": "Page",
+          "description": "Path to a page on this site, e.g. /booking/price-list — leave empty if using an external link below."
+        },
+        {
+          "type": "string",
+          "name": "url",
+          "label": "External link",
+          "description": "Use for links to other sites instead of a Page above, e.g. https://facebook.com/..."
+        },
+        {
+          "type": "string",
+          "name": "parent",
+          "label": "Parent item",
+          "description": "To nest this under another menu item as a dropdown, type that item's Label exactly (e.g. Osteopathy). Leave empty for a top-level item."
+        },
+        {
+          "type": "number",
+          "name": "weight",
+          "label": "Order",
+          "description": "Lower numbers appear first among items at the same level."
+        }
+      ]
+    }
+  ]
+}

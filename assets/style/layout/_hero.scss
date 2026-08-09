@@ -19,11 +19,12 @@
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity 1s ease;
+  transition: opacity 1.2s var(--ease);
   display: flex;
   align-items: center;
 
   &.is-active { opacity: 1; z-index: 1; }
+  &.is-active .hero-slide-bg { animation: hero-zoom 7s var(--ease) forwards; }
 }
 
 .hero-slide-bg {
@@ -33,12 +34,18 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
+  transform: scale(1.04);
+}
+
+@keyframes hero-zoom {
+  from { transform: scale(1.04); }
+  to { transform: scale(1.12); }
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(30, 42, 34, 0.72) 0%, rgba(30, 42, 34, 0.38) 55%, rgba(30, 42, 34, 0.15) 100%);
+  background: linear-gradient(100deg, rgba(30, 42, 34, 0.78) 0%, rgba(30, 42, 34, 0.45) 45%, rgba(30, 42, 34, 0.18) 75%, rgba(30, 42, 34, 0.05) 100%);
 }
 
 .hero-content {
@@ -70,6 +77,8 @@
   background: rgba(255, 255, 255, 0.45);
   cursor: pointer;
   padding: 0;
+  transition: background 0.2s var(--ease), transform 0.2s var(--ease);
 
+  &:hover { background: rgba(255, 255, 255, 0.75); transform: scale(1.15); }
   &.is-active { background: var(--white); }
 }
