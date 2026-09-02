@@ -1,107 +1,96 @@
-baseURL = "https://stockwood-painclinic.co.uk/"
-title = "Stockwood Pain Clinic"
+baseURL = "https://monika-osteopath.co.uk/"
 languageCode = "en-gb"
-
-# Editable via TinaCMS -> Configuration -> Site Settings.
+title = "Monika Wiesenthal Osteopath"
+theme = "custom"
 disableKinds = ["taxonomy", "term"]
-enableRobotsTXT = true
-summarylength = 30
-defaultContentLanguage = "en-gb"
-timeout = "60s"
 
-[pagination]
-  pagerSize = 10
-
-[sitemap]
-  changefreq = "monthly"
-  priority = 0.5
-
-[services.googleAnalytics]
-  ID = ""
-
-[minify]
-  minifyOutput = true
+[markup.goldmark.renderer]
+  unsafe = true
 
 [params]
-  favicon = "favicon.png"
+  phone = "01275 830241"
+  phoneHref = "tel:01275830241"
+  email = "monika@stockwood-painclinic.co.uk"
+  address1 = "106 Dutton Road"
+  address2 = "Stockwood, Bristol, BS14 8BU"
+  description = "Monika Wiesenthal Osteopath - Bristol"
 
-
-  [menus]
-    [[menus.main]]
-      name = "Home"
-      pageRef = "/"
-      weight = 1
-    [[menus.main]]
-      name = "Osteopathy"
-      pageRef = "/osteopathy"
-      weight = 2
-    [[menus.main]]
-      name = "What is Osteopathy?"
-      parent = "Osteopathy"
-      pageRef = "/osteopathy/what-is-osteopathy"
-      weight = 1
-    [[menus.main]]
-      name = "What Can Be Treated?"
-      parent = "Osteopathy"
-      pageRef = "/osteopathy/what-can-be-treated"
-      weight = 2
-    [[menus.main]]
-      name = "What Should I Expect?"
-      parent = "Osteopathy"
-      pageRef = "/osteopathy/what-should-i-expect"
-      weight = 3
-    [[menus.main]]
-      name = "Sport Injury"
-      parent = "Osteopathy"
-      pageRef = "/osteopathy/sport-injury"
-      weight = 4
-    [[menus.main]]
-      name = "Pregnancy"
-      parent = "Osteopathy"
-      pageRef = "/osteopathy/pregnancy"
-      weight = 5
-    [[menus.main]]
-      name = "Young Children"
-      parent = "Osteopathy"
-      pageRef = "/osteopathy/young-children"
-      weight = 6
-    [[menus.main]]
-      name = "Teenagers"
-      parent = "Osteopathy"
-      pageRef = "/osteopathy/teenagers"
-      weight = 7
-    [[menus.main]]
-      name = "Golden Years"
-      parent = "Osteopathy"
-      pageRef = "/osteopathy/golden-years"
-      weight = 8
-    [[menus.main]]
-      name = "Booking"
-      pageRef = "/booking"
-      weight = 3
-    [[menus.main]]
-      name = "Price List"
-      parent = "Booking"
-      pageRef = "/booking/price-list"
-      weight = 1
-    [[menus.main]]
-      name = "Online Booking"
-      parent = "Booking"
-      pageRef = "/booking/online-booking"
-      weight = 2
-    [[menus.main]]
-      name = "Blog"
-      pageRef = "/blog"
-      weight = 4
-    [[menus.main]]
-      name = "Dietary Advice"
-      pageRef = "/dietary-advice"
-      weight = 5
-    [[menus.main]]
-      name = "Find Us"
-      pageRef = "/find-us"
-      weight = 6
-    [[menus.main]]
-      name = "About Monika"
-      pageRef = "/about-monika"
-      weight = 7
+[menus]
+  [[menus.main]]
+    name = "Home"
+    pageRef = "/"
+    weight = 1
+  [[menus.main]]
+    name = "Osteopathy"
+    pageRef = "/osteopathy"
+    weight = 2
+  [[menus.main]]
+    name = "What is Osteopathy?"
+    parent = "Osteopathy"
+    pageRef = "/osteopathy/what-is-osteopathy"
+    weight = 1
+  [[menus.main]]
+    name = "What Can Be Treated?"
+    parent = "Osteopathy"
+    pageRef = "/osteopathy/what-can-be-treated"
+    weight = 2
+  [[menus.main]]
+    name = "What Should I Expect?"
+    parent = "Osteopathy"
+    pageRef = "/osteopathy/what-should-i-expect"
+    weight = 3
+  [[menus.main]]
+    name = "Sport Injury"
+    parent = "Osteopathy"
+    pageRef = "/osteopathy/sport-injury"
+    weight = 4
+  [[menus.main]]
+    name = "Pregnancy"
+    parent = "Osteopathy"
+    pageRef = "/osteopathy/pregnancy"
+    weight = 5
+  [[menus.main]]
+    name = "Young Children"
+    parent = "Osteopathy"
+    pageRef = "/osteopathy/young-children"
+    weight = 6
+  [[menus.main]]
+    name = "Teenagers"
+    parent = "Osteopathy"
+    pageRef = "/osteopathy/teenagers"
+    weight = 7
+  [[menus.main]]
+    name = "Golden Years"
+    parent = "Osteopathy"
+    pageRef = "/osteopathy/golden-years"
+    weight = 8
+  [[menus.main]]
+    name = "Booking"
+    pageRef = "/booking"
+    weight = 3
+  [[menus.main]]
+    name = "Price List"
+    parent = "Booking"
+    pageRef = "/booking/price-list"
+    weight = 1
+  [[menus.main]]
+    name = "Online Booking"
+    parent = "Booking"
+    pageRef = "/booking/online-booking"
+    weight = 2
+  [[menus.main]]
+    name = "Blog"
+    pageRef = "/blog"
+    weight = 4
+  [[menus.main]]
+    name = "Dietary Advice"
+    pageRef = "/dietary-advice"
+    weight = 5
+  [[menus.main]]
+    name = "Find Us"
+    pageRef = "/find-us"
+    weight = 6
+  [[menus.main]]
+    name = "About Monika"
+    pageRef = "/about-monika"
+    weight = 7
