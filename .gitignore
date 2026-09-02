@@ -1,7 +1,7 @@
 public/
 resources/
+package-lock.json
 .hugo_build.lock
-
 node_modules
 .env
-tina/__generated__
+static/cms

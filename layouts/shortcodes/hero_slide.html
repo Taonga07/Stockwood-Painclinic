@@ -1,0 +1,13 @@
+{{- /* One slide inside {{< hero-slider >}}. Params: image, heading, text, link, link_text */ -}}
+{{- $image := .Get "image" -}}
+{{- $img := partial "image.html" (dict "src" $image "alt" (.Get "heading") "class" "hero-slide-bg" "widths" (slice 640 1024 1600 2200) "sizes" "100vw") -}}
+<div class="hero-slide">
+  {{ $img }}
+  <div class="hero-overlay"></div>
+  <div class="wrap hero-content">
+    <h1>{{ .Get "heading" }}</h1>
+    {{ with .Get "text" }}<p>{{ . }}</p>{{ end }}
+    {{ with .Get "link" }}<a class="btn btn-light" href="{{ . }}">{{ with $.Get "link_text" }}{{ . }}{{ else }}More Detail{{ end }}</a>{{ end }}
+  </div>
+</div>
+{{ .Inner }}

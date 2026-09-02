@@ -2,7 +2,7 @@
 title: "Pregnancy"
 ---
 
-![](/images/article_images/16253724_s.jpg)
+{{< image src="article_images/16253724_s.jpg" alt="Pregnancy osteopathy" >}}
 
 Many women experience back pain or sciatica, either with their pregnancy or after the delivery, which osteopathy can help relieve. Periodic treatment through pregnancy can help the body adjust to the increasing weight and changing posture. This can help prevent strain or stiffness occurring and may also lead to an easier delivery. Osteopaths can give advice to pregnant women on which positions may be most suitable for them during the different stages of labour.
 

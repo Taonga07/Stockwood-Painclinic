@@ -1,0 +1,7 @@
+{{- /* One plan inside {{< price-table >}}. Params: name, price, cta_text, cta_link. Inner: markdown bullet list of features. */ -}}
+<div class="price-card">
+  <h3>{{ .Get "name" }}</h3>
+  <p class="price">{{ .Get "price" }}</p>
+  {{ with .Inner }}{{ . | markdownify }}{{ end }}
+  <a class="btn btn-primary" href="{{ .Get "cta_link" | default "/booking/online-booking/" }}">{{ .Get "cta_text" | default "Book Online" }}</a>
+</div>

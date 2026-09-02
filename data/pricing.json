@@ -1,0 +1,30 @@
+{
+  "_template": "pricing",
+  "plans": [
+    {
+      "name": "Initial Consultation",
+      "price": "\u00a3100",
+      "features": [
+        "Thorough case history taking",
+        "Examination",
+        "Treatment"
+      ]
+    },
+    {
+      "name": "Subsequent Treatments",
+      "price": "\u00a375",
+      "features": [
+        "Follow up examination",
+        "Follow up treatment"
+      ]
+    },
+    {
+      "name": "Extended Consultation",
+      "price": "\u00a3100",
+      "features": [
+        "Follow up examination",
+        "Extended follow up treatment"
+      ]
+    }
+  ]
+}

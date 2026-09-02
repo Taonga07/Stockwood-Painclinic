@@ -1,0 +1,18 @@
+{{- /* Wrapper for opening hours. Children: opening-hours-row. Falls back to site data if empty. */ -}}
+{{- $title := .Get "title" | default "Opening Times" -}}
+{{- $subtitle := .Get "subtitle" | default "Consultations by appointment only" -}}
+<section class="section hours-section">
+  <div class="wrap">
+    <p class="eyebrow">{{ $title }}</p>
+    <h2>{{ $subtitle }}</h2>
+    <table class="hours-table">
+      <tbody>
+        {{ if .Inner }}{{ .Inner }}{{ else }}
+          {{ range site.Data.config.opening_hours.hours }}
+          <tr><th>{{ .day }}</th><td>{{ .hours }}</td></tr>
+          {{ end }}
+        {{ end }}
+      </tbody>
+    </table>
+  </div>
+</section>

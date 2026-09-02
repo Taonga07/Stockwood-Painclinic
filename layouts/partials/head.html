@@ -1,0 +1,40 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ if .IsHome }}{{ site.Title }} &mdash; Osteopath, Stockwood, Bristol{{ else }}{{ .Title }} &mdash; {{ site.Title }}{{ end }}</title>
+<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ site.Data.config.contact.site_description }}{{ end }}">
+{{ $faviconSrc := site.Params.favicon | default "favicon.png" }}
+{{ $favicon := resources.GetMatch (printf "media/%s" $faviconSrc) }}
+{{ with $favicon }}<link rel="icon" type="image/png" href="{{ .RelPermalink }}">{{ end }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+{{ $sc := site.Data.config.style.colors }}
+{{ $ty := site.Data.config.style.typography }}
+{{ $ly := site.Data.config.style.layout }}
+{{ $vars := dict
+  "paper" ($sc.paper | default "#F1F0EA")
+  "paper-deep" ($sc.paper_deep | default "#E7E5DB")
+  "white" ($sc.white | default "#FFFFFF")
+  "ink" ($sc.ink | default "#1E2A22")
+  "ink-soft" ($sc.ink_soft | default "#445248")
+  "sage" ($sc.sage | default "#5C7A6B")
+  "sage-deep" ($sc.sage_deep | default "#33453B")
+  "sage-pale" ($sc.sage_pale | default "#E4EBE5")
+  "brass" ($sc.brass | default "#AD8A4E")
+  "brass-deep" ($sc.brass_deep | default "#8C6E38")
+  "line" ($sc.line | default "#D8D4C6")
+  "font-display" (css.Unquoted ($ty.font_display | default "\"Fraunces\", Georgia, serif"))
+  "font-body" (css.Unquoted ($ty.font_body | default "\"Public Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"))
+  "wrap-width" ($ly.wrap_width | default "1140px")
+  "radius" ($ly.radius | default "6px")
+}}
+{{ $opts := dict
+  "targetPath" "css/style.css"
+  "outputStyle" (cond hugo.IsProduction "compressed" "expanded")
+  "transpiler" "dartsass"
+  "vars" $vars
+}}
+{{ $style := resources.Get "style/main.scss" | css.Sass $opts }}
+{{ if hugo.IsProduction }}{{ $style = $style | fingerprint }}{{ end }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}"{{ with $style.Data.Integrity }} integrity="{{ . }}"{{ end }}>

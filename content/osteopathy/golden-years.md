@@ -2,7 +2,7 @@
 title: "Golden Years"
 ---
 
-![](/images/article_images/14904251_s.jpg)
+{{< image src="article_images/14904251_s.jpg" alt="Golden Years osteopathy" >}}
 
 Osteopathic treatment provides immediate relief from symptoms, reduces pain and swelling, gently relieves the muscle tightness, and lessens the pressure on the joint to promote range of movement. It can assist in rehabilitation after surgery such as a hip replacement. Treatment will also involve ensuring that other parts of the body are working well to minimise the stress on the damaged joint and Monika can further educate you on how you can improve your quality of life through diet and nutritional support, posture, and exercise.
 

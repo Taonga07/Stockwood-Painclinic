@@ -1,0 +1,24 @@
+{
+  "_template": "style",
+  "colors": {
+    "paper": "#F1F0EA",
+    "paper_deep": "#E7E5DB",
+    "white": "#FFFFFF",
+    "ink": "#1E2A22",
+    "ink_soft": "#445248",
+    "sage": "#5C7A6B",
+    "sage_deep": "#33453B",
+    "sage_pale": "#E4EBE5",
+    "brass": "#AD8A4E",
+    "brass_deep": "#8C6E38",
+    "line": "#D8D4C6"
+  },
+  "typography": {
+    "font_display": "\"Fraunces\", Georgia, serif",
+    "font_body": "\"Public Sans\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif"
+  },
+  "layout": {
+    "wrap_width": "1140px",
+    "radius": "6px"
+  }
+}

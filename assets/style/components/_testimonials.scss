@@ -1,0 +1,35 @@
+// =========================================================
+// COMPONENTS / TESTIMONIALS
+// =========================================================
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 2em;
+  text-align: left;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-top: 2px solid var(--brass);
+  border-radius: var(--radius);
+  padding: 28px;
+  margin: 0;
+  transition: background 0.25s var(--ease), transform 0.25s var(--ease);
+
+  &:hover { background: rgba(255, 255, 255, 0.1); transform: translateY(-2px); }
+
+  p { font-style: italic; }
+
+  cite {
+    display: block;
+    margin-top: 1em;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--brass);
+  }
+}
+
+.testimonial-note { text-align: center; margin-top: 2em; font-size: 0.9rem; opacity: 0.8; }

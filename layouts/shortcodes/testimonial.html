@@ -1,0 +1,5 @@
+{{- /* One quote inside {{< testimonials >}}. Params: author. Inner: the quote text. */ -}}
+<blockquote class="testimonial-card">
+  <p>&ldquo;{{ .Inner | markdownify | plainify }}&rdquo;</p>
+  <cite>{{ .Get "author" }}</cite>
+</blockquote>

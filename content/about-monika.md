@@ -2,7 +2,7 @@
 title: "About Monika"
 ---
 
-![](/images/article_images/Monika.jpg)
+{{< image src="article_images/Monika.jpg" alt="Monika Wiesenthal" >}}
 
 When she discovered Osteopathy and found great relief for the first time, she was so impressed, she bought into the profession. It's a big step to go back to college when you are in your late 30's, but she has never looked back.
 
