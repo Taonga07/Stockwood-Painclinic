@@ -1,19 +1,7 @@
 baseURL = "https://monika-osteopath.co.uk/"
-languageCode = "en-gb"
 title = "Monika Wiesenthal Osteopath"
-theme = "custom"
 disableKinds = ["taxonomy", "term"]
-
-[markup.goldmark.renderer]
-  unsafe = true
-
-[params]
-  phone = "01275 830241"
-  phoneHref = "tel:01275830241"
-  email = "monika@stockwood-painclinic.co.uk"
-  address1 = "106 Dutton Road"
-  address2 = "Stockwood, Bristol, BS14 8BU"
-  description = "Monika Wiesenthal Osteopath - Bristol"
+languageCode = "en-gb"
 
 [menus]
   [[menus.main]]
