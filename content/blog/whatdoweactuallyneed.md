@@ -1,5 +1,5 @@
 ---
-title: whatdoweactuallyneed
+title: What Do We Actually Need
 date: 2026-09-03
 draft: false
 ---
