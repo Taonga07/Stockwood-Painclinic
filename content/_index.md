@@ -15,14 +15,18 @@ hide_sidebar: true
 
 {{< /hero_slider >}}
 
-{{< welcome_intro image="article_images/Monika.jpg" heading="Welcome to Monika Wiesenthal's Osteopathic Practice" lede="Osteopath and Sports Injuries Therapist" >}}
-Located in Stockwood, Bristol, Monika Wiesenthal's Osteopathic Practice is easily accessible from both Bath and Bristol and offers calm surroundings for treatment and rehabilitation.
+{{< welcome_intro image="article_images/Monika.jpg" heading="Welcome to Stockwood Painclinic" lede="Osteopath and Sports Injuries Therapist" >}}
+Welcome to Stockwood Pain Clinic
 
-With many years of experience and dedication to Osteopathy, Monika has developed a thorough, effective and varied approach to treatment, looking at the whole of the body and its intricately linked systems. Monika's training extends into the biochemistry of the body and how the human mind can affect the speed of recovery. With her treatments, Monika has enjoyed helping adults, children and babies understand and overcome a wide range of health problems, as well as supporting their general well-being.
 
-Monika's personal back injury was what led her into the study of Osteopathy; since her discovery she has never looked back. Knowing what pain feels like, she has an acute understanding of where her patients are and a realistic view of how much can be achieved as she walks together with them to a new and healthier life.
+Advanced Manual Therapy & Sports Injuries Specialist
 
-Thorough high quality care is paramount to Monika, as is treating each patient as an individual. Please feel free to ring the practice if you wish to discuss any treatments &mdash; Monika will be very happy to talk to you.
+Principal Practitioner: Monika Wiesenthal
+Located in Stockwood, Bristol, the Stockwood Pain Clinic is easily accessible from both Bath and Bristol, offering calm surroundings for clinical treatment and rehabilitation.
+With twenty-nine years of experience and deep historic dedication to the principles of structural bodywork, Monika has developed a thorough, effective, and varied approach to treatment. She looks at the whole body and its intricately linked systems. Monika’s extensive training—having qualified with a Diploma in Osteopathy (D.O.) in June 1997—extends deeply into the biochemistry of the body and how the human mind affects the speed of recovery. Through her hands-on treatments, Monika has enjoyed helping adults, children, and babies understand and overcome a wide range of health problems, as well as supporting their general well-being.
+Monika’s personal back injury was what originally led her to study physical alignment and manual therapeutics; since that discovery, she has never looked back. Knowing exactly what pain feels like, she has an acute, empathetic understanding of where her patients are. She maintains a realistic, compassionate view of how much can be achieved as she walks together with them toward a new, healthier, and more mobile life.
+Thorough, high-quality care is paramount at the Stockwood Pain Clinic, as is treating each patient as a unique individual. Many of Monika's long-term patients originally sought out her clinic when looking for an experienced local osteopath or osteopathic practitioner in Bristol and Bath. While she chooses to operate independently of the statutory register as of May 2027, her decades of refined clinical expertise and exceptional standard of care remain entirely unchanged.
+Please feel free to ring the clinic if you wish to discuss your symptoms or treatment options—Monika will be very happy to talk to you.
 {{< /welcome_intro >}}
 
 {{< opening_hours >}}{{< /opening_hours >}}
