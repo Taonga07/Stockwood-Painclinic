@@ -15,11 +15,7 @@ hide_sidebar: true
 
 {{< /hero_slider >}}
 
-{{< welcome_intro image="article_images/Monika.jpg" heading="Welcome to Stockwood Painclinic" lede="Osteopath and Sports Injuries Therapist" >}}
-Welcome to Stockwood Pain Clinic
-
-
-Advanced Manual Therapy & Sports Injuries Specialist
+{{< welcome_intro image="article_images/Monika.jpg" heading="Welcome to Stockwood Pain Clinic" lede="Advanced Manual Therapy & Sports Injuries Specialist" >}}
 
 Principal Practitioner: Monika Wiesenthal
 Located in Stockwood, Bristol, the Stockwood Pain Clinic is easily accessible from both Bath and Bristol, offering calm surroundings for clinical treatment and rehabilitation.
