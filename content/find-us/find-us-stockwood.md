@@ -1,6 +1,7 @@
 ---
 title: "Find Us - Stockwood"
 eyebrow: "Find Us"
+___mb_schema: "/.mattrbld/schemas/page-with-shortcodes.json"
 ---
 
 ### 106 Dutton Road

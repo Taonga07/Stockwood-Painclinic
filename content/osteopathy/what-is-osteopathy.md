@@ -1,5 +1,6 @@
 ---
 title: "What is Osteopathy?"
+___mb_schema: "/.mattrbld/schemas/page-with-shortcodes.json"
 ---
 
 {{< image src="article_images/19040058_s.jpg" alt="What is osteopathy" >}}

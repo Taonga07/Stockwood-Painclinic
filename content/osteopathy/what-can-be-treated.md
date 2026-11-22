@@ -1,5 +1,6 @@
 ---
 title: "What Can Be Treated?"
+___mb_schema: "/.mattrbld/schemas/page-with-shortcodes.json"
 ---
 
 {{< image src="article_images/Osteopic.jpg" alt="Conditions osteopathy can treat" >}}

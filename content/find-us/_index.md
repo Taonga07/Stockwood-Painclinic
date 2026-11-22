@@ -1,5 +1,6 @@
 ---
 title: "Find Us"
+___mb_schema: "/.mattrbld/schemas/page-with-shortcodes.json"
 ---
 
 Select a clinic to open more details:

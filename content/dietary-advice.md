@@ -1,5 +1,6 @@
 ---
 title: "Dietary Advice"
+___mb_schema: "/.mattrbld/schemas/page.json"
 ---
 
 ## Palaeolithic Diet

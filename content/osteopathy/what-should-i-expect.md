@@ -1,5 +1,6 @@
 ---
 title: "What should I expect?"
+___mb_schema: "/.mattrbld/schemas/page-with-shortcodes.json"
 ---
 
 {{< image src="article_images/Backpain.jpg" alt="What to expect from osteopathy" >}}

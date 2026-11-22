@@ -1,6 +1,7 @@
 ---
 title: "Tension Headaches"
 date: 2020-09-01
+___mb_schema: "/.mattrbld/schemas/blog-post.json"
 ---
 
 What are tension headaches?

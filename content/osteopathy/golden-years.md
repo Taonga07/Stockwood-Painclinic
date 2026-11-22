@@ -1,5 +1,6 @@
 ---
 title: "Golden Years"
+___mb_schema: "/.mattrbld/schemas/page-with-shortcodes.json"
 ---
 
 {{< image src="article_images/14904251_s.jpg" alt="Golden Years osteopathy" >}}

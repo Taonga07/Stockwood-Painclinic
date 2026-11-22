@@ -1,5 +1,5 @@
 {
-  "_template": "openingHours",
+  "___mb_schema": "/.mattrbld/schemas/opening-hours.json",
   "hours": [
     {
       "day": "Monday",

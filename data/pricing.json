@@ -1,9 +1,9 @@
 {
-  "_template": "pricing",
+  "___mb_schema": "/.mattrbld/schemas/pricing.json",
   "plans": [
     {
       "name": "Initial Consultation",
-      "price": "\u00a3100",
+      "price": "£100",
       "features": [
         "Thorough case history taking",
         "Examination",
@@ -12,7 +12,7 @@
     },
     {
       "name": "Subsequent Treatments",
-      "price": "\u00a375",
+      "price": "£75",
       "features": [
         "Follow up examination",
         "Follow up treatment"
@@ -20,7 +20,7 @@
     },
     {
       "name": "Extended Consultation",
-      "price": "\u00a3100",
+      "price": "£100",
       "features": [
         "Follow up examination",
         "Extended follow up treatment"

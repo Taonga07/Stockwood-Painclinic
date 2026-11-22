@@ -2,6 +2,7 @@
 title: "Home"
 hide_page_hero: true
 hide_sidebar: true
+___mb_schema: "/.mattrbld/schemas/page-with-shortcodes.json"
 ---
 
 {{< hero_slider >}}

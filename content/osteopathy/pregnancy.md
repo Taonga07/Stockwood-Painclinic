@@ -1,5 +1,6 @@
 ---
 title: "Pregnancy"
+___mb_schema: "/.mattrbld/schemas/page-with-shortcodes.json"
 ---
 
 {{< image src="article_images/16253724_s.jpg" alt="Pregnancy osteopathy" >}}

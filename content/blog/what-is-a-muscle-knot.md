@@ -1,6 +1,7 @@
 ---
 title: "What is a Muscle Knot"
 date: 2020-08-13
+___mb_schema: "/.mattrbld/schemas/blog-post.json"
 ---
 
 What are Muscle Knots?

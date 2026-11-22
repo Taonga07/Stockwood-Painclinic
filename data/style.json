@@ -1,5 +1,5 @@
 {
-  "_template": "style",
+  "___mb_schema": "/.mattrbld/schemas/style.json",
   "colors": {
     "paper": "#F1F0EA",
     "paper_deep": "#E7E5DB",

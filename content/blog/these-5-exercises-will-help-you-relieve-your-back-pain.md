@@ -1,6 +1,7 @@
 ---
 title: "These 5 exercises will help you relieve your back pain"
 date: 2021-01-05
+___mb_schema: "/.mattrbld/schemas/blog-post.json"
 ---
 
 ### Show back pain the back door and begin with the doorway stretch

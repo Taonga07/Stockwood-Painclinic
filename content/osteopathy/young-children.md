@@ -1,5 +1,6 @@
 ---
 title: "Young Children"
+___mb_schema: "/.mattrbld/schemas/page-with-shortcodes.json"
 ---
 
 {{< image src="article_images/Children3.jpg" alt="Osteopathy for young children" >}}

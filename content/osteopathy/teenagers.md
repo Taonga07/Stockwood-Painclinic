@@ -1,5 +1,6 @@
 ---
 title: "Teenagers"
+___mb_schema: "/.mattrbld/schemas/page-with-shortcodes.json"
 ---
 
 As young people grow up the body frame undergoes a great number of changes. Osteopaths with their highly developed sense of touch can help the body framework adjust to the postural demands made upon it. This may simply be due to lack of compensation for a scoliosis or due to mechanical changes that occur in conditions such as osteochondritis. They may also suffer from Musculo-skeletal problems, aches and pains, growing pains and tension headaches.

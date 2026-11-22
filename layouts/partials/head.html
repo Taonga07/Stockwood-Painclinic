@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ if .IsHome }}{{ site.Title }} &mdash; Osteopath, Stockwood, Bristol{{ else }}{{ .Title }} &mdash; {{ site.Title }}{{ end }}</title>
-<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ site.Data.config.contact.site_description }}{{ end }}">
+<meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ site.Data.contact.site_description }}{{ end }}">
 {{ $faviconSrc := site.Params.favicon | default "favicon.png" }}
 {{ $favicon := resources.GetMatch (printf "media/%s" $faviconSrc) }}
 {{ with $favicon }}<link rel="icon" type="image/png" href="{{ .RelPermalink }}">{{ end }}
@@ -9,9 +9,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-{{ $sc := site.Data.config.style.colors }}
-{{ $ty := site.Data.config.style.typography }}
-{{ $ly := site.Data.config.style.layout }}
+{{ $sc := site.Data.style.colors }}
+{{ $ty := site.Data.style.typography }}
+{{ $ly := site.Data.style.layout }}
 {{ $vars := dict
   "paper" ($sc.paper | default "#F1F0EA")
   "paper-deep" ($sc.paper_deep | default "#E7E5DB")

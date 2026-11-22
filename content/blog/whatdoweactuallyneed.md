@@ -2,6 +2,7 @@
 title: What Do We Actually Need
 date: 2026-09-03
 draft: false
+___mb_schema: "/.mattrbld/schemas/blog-post.json"
 ---
 **Question**
 

@@ -1,5 +1,6 @@
 ---
 title: "Sports Injury"
+___mb_schema: "/.mattrbld/schemas/page-with-shortcodes.json"
 ---
 
 {{< image src="article_images/SportingInjury.jpg" alt="Sports injury treatment" >}}

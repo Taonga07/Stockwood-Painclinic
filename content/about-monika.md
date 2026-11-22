@@ -1,5 +1,6 @@
 ---
 title: "About Monika"
+___mb_schema: "/.mattrbld/schemas/page-with-shortcodes.json"
 ---
 
 {{< image src="article_images/Monika.jpg" alt="Monika Wiesenthal" >}}
