@@ -1,0 +1,58 @@
+{
+  "fields": [
+    {
+      "type": "text",
+      "key": "phone",
+      "label": "Phone (display)",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": true,
+        "unit": "length"
+      }
+    },
+    {
+      "type": "text",
+      "key": "phone_href",
+      "label": "Phone link",
+      "description": "e.g. tel:+441275830241"
+    },
+    {
+      "type": "text",
+      "key": "email",
+      "label": "Email",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": true,
+        "unit": "length"
+      }
+    },
+    {
+      "type": "text",
+      "key": "address1",
+      "label": "Address line 1"
+    },
+    {
+      "type": "text",
+      "key": "address2",
+      "label": "Address line 2"
+    },
+    {
+      "type": "text",
+      "key": "site_description",
+      "label": "Site description",
+      "description": "Default meta description for pages without their own.",
+      "options": {
+        "wrapping": true,
+        "multiline": true
+      }
+    }
+  ]
+}

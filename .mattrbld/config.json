@@ -1,26 +1,6 @@
 {
-  "autoquotes": null,
-  "brandColors": [],
-  "corsProxy": "/corsprox",
-  "name": "Stockwood-Painclinic",
+  "name": "Stockwood Pain Clinic",
   "sidebar": [
-    {
-      "label": "The sidebar has not yet been configured for this project"
-    },
-    {
-      "icon": "wrench-and-driver",
-      "label": "Configure now",
-      "target": {
-        "name": "Project.Settings",
-        "query": {
-          "tab": "sidebar"
-        }
-      },
-      "onlyPrivileged": true
-    },
-    {
-      "separator": true
-    },
     {
       "label": "Dashboard",
       "icon": "grid",
@@ -28,6 +8,45 @@
         "name": "Project"
       },
       "protected": true
+    },
+    {
+      "label": "Content"
+    },
+    {
+      "label": "Pages",
+      "icon": "globe-alt",
+      "target": {
+        "name": "Project.Collection",
+        "params": {
+          "path": "/.mattrbld/collections/pages.json"
+        }
+      }
+    },
+    {
+      "label": "Blog",
+      "icon": "text-alt",
+      "target": {
+        "name": "Project.Collection",
+        "params": {
+          "path": "/.mattrbld/collections/blog.json"
+        }
+      }
+    },
+    {
+      "label": "Site settings"
+    },
+    {
+      "label": "Contact, hours, prices & reviews",
+      "icon": "settings",
+      "target": {
+        "name": "Project.Collection",
+        "params": {
+          "path": "/.mattrbld/collections/site-data.json"
+        }
+      }
+    },
+    {
+      "separator": true
     },
     {
       "label": "Media Library",
@@ -46,31 +65,5 @@
       "onlyPrivileged": true,
       "protected": true
     }
-  ],
-  "slugifyOptions": {
-    "customReplacements": [],
-    "lowercase": true,
-    "decamelize": true,
-    "preserveLeadingUnderscore": true,
-    "preserveTrailingDash": false,
-    "preserveCharacters": [],
-    "separator": "-",
-    "transliterate": true
-  },
-  "customRoles": [],
-  "draftsDir": null,
-  "previewUrl": null,
-  "languages": [],
-  "media": {
-    "advanced": false,
-    "customFields": null,
-    "dir": null,
-    "maxSize": null,
-    "outputPath": null,
-    "permissions": {
-      "everybody": [
-        "everything"
-      ]
-    }
-  }
+  ]
 }

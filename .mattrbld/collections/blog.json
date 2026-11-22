@@ -1,0 +1,20 @@
+{
+  "allowedTypes": [],
+  "defaultFilename": null,
+  "disableComments": true,
+  "disablePreview": true,
+  "draftByDefault": false,
+  "linkable": false,
+  "maxSize": null,
+  "permissions": {
+    "everybody": [
+      "everything"
+    ]
+  },
+  "rawEntityNames": false,
+  "dir": "/content/blog",
+  "type": "md",
+  "schemas": [
+    "/.mattrbld/schemas/blog-post.json"
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "fields": [
+    {
+      "type": "text",
+      "key": "title",
+      "label": "Page Title",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": true,
+        "unit": "length"
+      }
+    },
+    {
+      "type": "text",
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "description": "Small label above the page heading. Leave empty to use the parent section name."
+    },
+    {
+      "type": "text",
+      "key": "description",
+      "label": "Meta Description",
+      "description": "Optional. Falls back to the site description."
+    },
+    {
+      "type": "toggle",
+      "key": "hide_page_hero",
+      "label": "Hide page hero",
+      "default": false,
+      "description": "Used by the home page: renders the content full-width without the title banner."
+    },
+    {
+      "type": "toggle",
+      "key": "hide_sidebar",
+      "label": "Hide sidebar",
+      "default": false,
+      "description": "Hide the 'get in touch' sidebar on this page."
+    },
+    {
+      "type": "rich text",
+      "key": "content",
+      "label": "Page Content",
+      "options": {
+        "outputFormat": "markdown",
+        "blockFormats": [
+          "blockquote",
+          "heading",
+          "hr",
+          "orderedList",
+          "unorderedList"
+        ],
+        "inlineFormats": [
+          "em",
+          "strong",
+          "link"
+        ],
+        "minHeading": 2,
+        "maxHeading": 4,
+        "allowRaw": false,
+        "linkOptions": [
+          "allowExternal",
+          "allowInternal"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "allowedTypes": [],
+  "defaultFilename": null,
+  "disableComments": true,
+  "disablePreview": true,
+  "draftByDefault": false,
+  "linkable": false,
+  "maxSize": null,
+  "permissions": {
+    "everybody": [
+      "everything"
+    ]
+  },
+  "rawEntityNames": false,
+  "dir": "/data",
+  "type": "json",
+  "schemas": [
+    "/.mattrbld/schemas/contact.json",
+    "/.mattrbld/schemas/opening-hours.json",
+    "/.mattrbld/schemas/pricing.json",
+    "/.mattrbld/schemas/testimonials.json",
+    "/.mattrbld/schemas/style.json"
+  ]
+}

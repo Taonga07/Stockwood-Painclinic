@@ -1,0 +1,177 @@
+{
+  "fields": [
+    {
+      "type": "group",
+      "key": "colors",
+      "label": "Colours",
+      "value": [
+        {
+          "type": "color",
+          "key": "paper",
+          "label": "Paper",
+          "options": {
+            "format": "hex",
+            "removable": false,
+            "useBrandPalette": false,
+            "paletteOnly": false,
+            "palette": []
+          }
+        },
+        {
+          "type": "color",
+          "key": "paper_deep",
+          "label": "Paper (deep)",
+          "options": {
+            "format": "hex",
+            "removable": false,
+            "useBrandPalette": false,
+            "paletteOnly": false,
+            "palette": []
+          }
+        },
+        {
+          "type": "color",
+          "key": "white",
+          "label": "White",
+          "options": {
+            "format": "hex",
+            "removable": false,
+            "useBrandPalette": false,
+            "paletteOnly": false,
+            "palette": []
+          }
+        },
+        {
+          "type": "color",
+          "key": "ink",
+          "label": "Ink",
+          "options": {
+            "format": "hex",
+            "removable": false,
+            "useBrandPalette": false,
+            "paletteOnly": false,
+            "palette": []
+          }
+        },
+        {
+          "type": "color",
+          "key": "ink_soft",
+          "label": "Ink (soft)",
+          "options": {
+            "format": "hex",
+            "removable": false,
+            "useBrandPalette": false,
+            "paletteOnly": false,
+            "palette": []
+          }
+        },
+        {
+          "type": "color",
+          "key": "sage",
+          "label": "Sage",
+          "options": {
+            "format": "hex",
+            "removable": false,
+            "useBrandPalette": false,
+            "paletteOnly": false,
+            "palette": []
+          }
+        },
+        {
+          "type": "color",
+          "key": "sage_deep",
+          "label": "Sage (deep)",
+          "options": {
+            "format": "hex",
+            "removable": false,
+            "useBrandPalette": false,
+            "paletteOnly": false,
+            "palette": []
+          }
+        },
+        {
+          "type": "color",
+          "key": "sage_pale",
+          "label": "Sage (pale)",
+          "options": {
+            "format": "hex",
+            "removable": false,
+            "useBrandPalette": false,
+            "paletteOnly": false,
+            "palette": []
+          }
+        },
+        {
+          "type": "color",
+          "key": "brass",
+          "label": "Brass",
+          "options": {
+            "format": "hex",
+            "removable": false,
+            "useBrandPalette": false,
+            "paletteOnly": false,
+            "palette": []
+          }
+        },
+        {
+          "type": "color",
+          "key": "brass_deep",
+          "label": "Brass (deep)",
+          "options": {
+            "format": "hex",
+            "removable": false,
+            "useBrandPalette": false,
+            "paletteOnly": false,
+            "palette": []
+          }
+        },
+        {
+          "type": "color",
+          "key": "line",
+          "label": "Line",
+          "options": {
+            "format": "hex",
+            "removable": false,
+            "useBrandPalette": false,
+            "paletteOnly": false,
+            "palette": []
+          }
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "key": "typography",
+      "label": "Typography",
+      "value": [
+        {
+          "type": "text",
+          "key": "font_display",
+          "label": "Display font stack"
+        },
+        {
+          "type": "text",
+          "key": "font_body",
+          "label": "Body font stack"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "key": "layout",
+      "label": "Layout",
+      "value": [
+        {
+          "type": "text",
+          "key": "wrap_width",
+          "label": "Content width"
+        },
+        {
+          "type": "text",
+          "key": "radius",
+          "label": "Corner radius"
+        }
+      ]
+    }
+  ]
+}

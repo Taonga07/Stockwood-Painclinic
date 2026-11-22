@@ -1,0 +1,54 @@
+{
+  "fields": [
+    {
+      "type": "text",
+      "key": "title",
+      "label": "Page Title",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": true,
+        "unit": "length"
+      }
+    },
+    {
+      "type": "text",
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "description": "Small label above the page heading. Leave empty to use the parent section name."
+    },
+    {
+      "type": "text",
+      "key": "description",
+      "label": "Meta Description",
+      "description": "Optional. Falls back to the site description."
+    },
+    {
+      "type": "toggle",
+      "key": "hide_page_hero",
+      "label": "Hide page hero",
+      "default": false,
+      "description": "Used by the home page: renders the content full-width without the title banner."
+    },
+    {
+      "type": "toggle",
+      "key": "hide_sidebar",
+      "label": "Hide sidebar",
+      "default": false,
+      "description": "Hide the 'get in touch' sidebar on this page."
+    },
+    {
+      "type": "text",
+      "key": "content",
+      "label": "Page Content (Markdown + shortcodes)",
+      "description": "Raw Markdown. Use this schema for pages containing Hugo shortcodes such as {{< image >}}, {{< hero_slider >}} or {{< price_table >}} so they are saved exactly as typed.",
+      "options": {
+        "wrapping": true,
+        "multiline": true
+      }
+    }
+  ]
+}

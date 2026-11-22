@@ -1,0 +1,72 @@
+{
+  "fields": [
+    {
+      "type": "text",
+      "key": "title",
+      "label": "Post Title",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": true,
+        "unit": "length"
+      }
+    },
+    {
+      "type": "date",
+      "key": "date",
+      "label": "Published",
+      "options": {
+        "outputFormat": "iso",
+        "removable": false,
+        "showTime": false,
+        "defaultToNow": true,
+        "useAsUpdatedAt": false,
+        "only": null
+      },
+      "validation": {
+        "max": null,
+        "min": null,
+        "required": true,
+        "unit": "date",
+        "isString": true
+      }
+    },
+    {
+      "type": "toggle",
+      "key": "draft",
+      "label": "Draft",
+      "default": false,
+      "description": "Draft posts are not published by Hugo."
+    },
+    {
+      "type": "rich text",
+      "key": "content",
+      "label": "Post Content",
+      "options": {
+        "outputFormat": "markdown",
+        "blockFormats": [
+          "blockquote",
+          "heading",
+          "hr",
+          "orderedList",
+          "unorderedList"
+        ],
+        "inlineFormats": [
+          "em",
+          "strong",
+          "link"
+        ],
+        "minHeading": 2,
+        "maxHeading": 4,
+        "allowRaw": false,
+        "linkOptions": [
+          "allowExternal",
+          "allowInternal"
+        ]
+      }
+    }
+  ]
+}
