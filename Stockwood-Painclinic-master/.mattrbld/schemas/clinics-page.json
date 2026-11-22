@@ -1,0 +1,118 @@
+{
+  "fields": [
+    {
+      "type": "text",
+      "key": "title",
+      "label": "Page Title",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": true,
+        "unit": "length"
+      }
+    },
+    {
+      "type": "text",
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "description": "Small label above the heading. Leave empty to use the parent section name."
+    },
+    {
+      "type": "text",
+      "key": "description",
+      "label": "Meta Description",
+      "description": "Optional. Falls back to the site description."
+    },
+    {
+      "type": "toggle",
+      "key": "hide_sidebar",
+      "label": "Hide sidebar",
+      "default": false,
+      "description": "Hide the 'get in touch' sidebar."
+    },
+    {
+      "type": "rows",
+      "key": "clinics",
+      "label": "Clinics",
+      "options": {
+        "compact": false,
+        "allowEditing": true,
+        "itemLabel": "Clinic"
+      },
+      "value": [
+        {
+          "type": "text",
+          "key": "name",
+          "label": "Name",
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": true,
+            "unit": "length"
+          }
+        },
+        {
+          "type": "image",
+          "key": "image",
+          "label": "Photo",
+          "options": {
+            "resolutionHint": "",
+            "removable": false,
+            "simple": true
+          },
+          "validation": {
+            "required": true
+          }
+        },
+        {
+          "type": "text",
+          "key": "link",
+          "label": "Page link",
+          "description": "e.g. /find-us/find-us-stockwood/",
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": true,
+            "unit": "length"
+          }
+        }
+      ]
+    },
+    {
+      "type": "rich text",
+      "key": "content",
+      "label": "Page Content",
+      "options": {
+        "outputFormat": "markdown",
+        "blockFormats": [
+          "blockquote",
+          "heading",
+          "hr",
+          "orderedList",
+          "unorderedList"
+        ],
+        "inlineFormats": [
+          "em",
+          "strong",
+          "link"
+        ],
+        "minHeading": 2,
+        "maxHeading": 4,
+        "allowRaw": false,
+        "linkOptions": [
+          "allowExternal",
+          "allowInternal"
+        ]
+      }
+    }
+  ]
+}

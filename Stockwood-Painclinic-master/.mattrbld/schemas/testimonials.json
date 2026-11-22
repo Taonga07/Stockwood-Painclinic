@@ -1,0 +1,49 @@
+{
+  "fields": [
+    {
+      "type": "rows",
+      "key": "items",
+      "label": "Testimonials",
+      "options": {
+        "compact": false,
+        "allowEditing": true,
+        "itemLabel": "Testimonial"
+      },
+      "value": [
+        {
+          "type": "text",
+          "key": "quote",
+          "label": "Quote",
+          "options": {
+            "wrapping": true,
+            "multiline": true
+          },
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": true,
+            "unit": "length"
+          }
+        },
+        {
+          "type": "text",
+          "key": "author",
+          "label": "Author",
+          "description": "e.g. Sarah F, Keynsham Bristol",
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": true,
+            "unit": "length"
+          }
+        }
+      ]
+    }
+  ]
+}

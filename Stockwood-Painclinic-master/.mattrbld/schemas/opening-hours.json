@@ -1,0 +1,45 @@
+{
+  "fields": [
+    {
+      "type": "rows",
+      "key": "hours",
+      "label": "Opening hours",
+      "options": {
+        "compact": true,
+        "allowEditing": true,
+        "itemLabel": "Day"
+      },
+      "value": [
+        {
+          "type": "text",
+          "key": "day",
+          "label": "Day",
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": true,
+            "unit": "length"
+          }
+        },
+        {
+          "type": "text",
+          "key": "hours",
+          "label": "Hours",
+          "description": "e.g. 8:00 AM - 1:00 PM, or CLOSED",
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": true,
+            "unit": "length"
+          }
+        }
+      ]
+    }
+  ]
+}

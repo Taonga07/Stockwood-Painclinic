@@ -1,0 +1,69 @@
+{
+  "name": "Stockwood Pain Clinic",
+  "sidebar": [
+    {
+      "label": "Dashboard",
+      "icon": "grid",
+      "target": {
+        "name": "Project"
+      },
+      "protected": true
+    },
+    {
+      "label": "Content"
+    },
+    {
+      "label": "Pages",
+      "icon": "globe-alt",
+      "target": {
+        "name": "Project.Collection",
+        "params": {
+          "path": "/.mattrbld/collections/pages.json"
+        }
+      }
+    },
+    {
+      "label": "Blog",
+      "icon": "text-alt",
+      "target": {
+        "name": "Project.Collection",
+        "params": {
+          "path": "/.mattrbld/collections/blog.json"
+        }
+      }
+    },
+    {
+      "label": "Site settings"
+    },
+    {
+      "label": "Contact, hours, prices & reviews",
+      "icon": "settings",
+      "target": {
+        "name": "Project.Collection",
+        "params": {
+          "path": "/.mattrbld/collections/site-data.json"
+        }
+      }
+    },
+    {
+      "separator": true
+    },
+    {
+      "label": "Media Library",
+      "icon": "image-stack",
+      "target": {
+        "name": "Project.MediaLibrary"
+      },
+      "protected": true
+    },
+    {
+      "label": "Settings",
+      "icon": "settings",
+      "target": {
+        "name": "Project.Settings"
+      },
+      "onlyPrivileged": true,
+      "protected": true
+    }
+  ]
+}

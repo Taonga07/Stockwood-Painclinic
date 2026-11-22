@@ -1,0 +1,54 @@
+{
+  "fields": [
+    {
+      "type": "rows",
+      "key": "plans",
+      "label": "Price plans",
+      "options": {
+        "compact": false,
+        "allowEditing": true,
+        "itemLabel": "Plan"
+      },
+      "value": [
+        {
+          "type": "text",
+          "key": "name",
+          "label": "Name",
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": true,
+            "unit": "length"
+          }
+        },
+        {
+          "type": "text",
+          "key": "price",
+          "label": "Price",
+          "description": "Include the currency symbol, e.g. £75",
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": true,
+            "unit": "length"
+          }
+        },
+        {
+          "type": "list",
+          "key": "features",
+          "label": "What's included",
+          "options": {
+            "limitToModel": false,
+            "model": []
+          }
+        }
+      ]
+    }
+  ]
+}

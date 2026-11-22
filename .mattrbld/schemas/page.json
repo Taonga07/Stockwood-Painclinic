@@ -18,7 +18,7 @@
       "type": "text",
       "key": "eyebrow",
       "label": "Eyebrow",
-      "description": "Small label above the page heading. Leave empty to use the parent section name."
+      "description": "Small label above the heading. Leave empty to use the parent section name."
     },
     {
       "type": "text",
@@ -28,17 +28,33 @@
     },
     {
       "type": "toggle",
-      "key": "hide_page_hero",
-      "label": "Hide page hero",
-      "default": false,
-      "description": "Used by the home page: renders the content full-width without the title banner."
-    },
-    {
-      "type": "toggle",
       "key": "hide_sidebar",
       "label": "Hide sidebar",
       "default": false,
-      "description": "Hide the 'get in touch' sidebar on this page."
+      "description": "Hide the 'get in touch' sidebar."
+    },
+    {
+      "type": "group",
+      "key": "lead_image",
+      "label": "Lead image",
+      "value": [
+        {
+          "type": "image",
+          "key": "src",
+          "label": "Image",
+          "options": {
+            "resolutionHint": "",
+            "removable": true,
+            "simple": true
+          }
+        },
+        {
+          "type": "text",
+          "key": "alt",
+          "label": "Alt text",
+          "description": "Describe the image for screen readers."
+        }
+      ]
     },
     {
       "type": "rich text",

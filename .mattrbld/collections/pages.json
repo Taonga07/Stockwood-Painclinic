@@ -16,6 +16,9 @@
   "type": "md",
   "schemas": [
     "/.mattrbld/schemas/page.json",
-    "/.mattrbld/schemas/page-with-shortcodes.json"
+    "/.mattrbld/schemas/home.json",
+    "/.mattrbld/schemas/clinics-page.json",
+    "/.mattrbld/schemas/location-page.json",
+    "/.mattrbld/schemas/booking-page.json"
   ]
 }

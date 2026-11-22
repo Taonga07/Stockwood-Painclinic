@@ -1,0 +1,24 @@
+{
+  "allowedTypes": [],
+  "defaultFilename": null,
+  "disableComments": true,
+  "disablePreview": true,
+  "draftByDefault": false,
+  "linkable": false,
+  "maxSize": null,
+  "permissions": {
+    "everybody": [
+      "everything"
+    ]
+  },
+  "rawEntityNames": false,
+  "dir": "/content",
+  "type": "md",
+  "schemas": [
+    "/.mattrbld/schemas/page.json",
+    "/.mattrbld/schemas/home.json",
+    "/.mattrbld/schemas/clinics-page.json",
+    "/.mattrbld/schemas/location-page.json",
+    "/.mattrbld/schemas/booking-page.json"
+  ]
+}

@@ -1,0 +1,165 @@
+{
+  "fields": [
+    {
+      "type": "text",
+      "key": "title",
+      "label": "Page Title",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": true,
+        "unit": "length"
+      }
+    },
+    {
+      "type": "text",
+      "key": "description",
+      "label": "Meta Description"
+    },
+    {
+      "type": "rows",
+      "key": "hero_slides",
+      "label": "Hero slides",
+      "options": {
+        "compact": false,
+        "allowEditing": true,
+        "itemLabel": "Slide"
+      },
+      "value": [
+        {
+          "type": "image",
+          "key": "image",
+          "label": "Banner image",
+          "options": {
+            "resolutionHint": "",
+            "removable": false,
+            "simple": true
+          },
+          "validation": {
+            "required": true
+          }
+        },
+        {
+          "type": "text",
+          "key": "heading",
+          "label": "Heading",
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": true,
+            "unit": "length"
+          }
+        },
+        {
+          "type": "text",
+          "key": "text",
+          "label": "Sub-text"
+        },
+        {
+          "type": "text",
+          "key": "link",
+          "label": "Link",
+          "description": "e.g. /osteopathy/pregnancy/"
+        },
+        {
+          "type": "text",
+          "key": "link_text",
+          "label": "Button text",
+          "description": "Defaults to 'More Detail'."
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "key": "welcome",
+      "label": "Welcome section",
+      "value": [
+        {
+          "type": "image",
+          "key": "image",
+          "label": "Photo",
+          "options": {
+            "resolutionHint": "",
+            "removable": true,
+            "simple": true
+          }
+        },
+        {
+          "type": "text",
+          "key": "eyebrow",
+          "label": "Eyebrow",
+          "description": "Defaults to 'Welcome'."
+        },
+        {
+          "type": "text",
+          "key": "heading",
+          "label": "Heading",
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": true,
+            "unit": "length"
+          }
+        },
+        {
+          "type": "text",
+          "key": "lede",
+          "label": "Lede"
+        }
+      ]
+    },
+    {
+      "type": "toggle",
+      "key": "show_opening_hours",
+      "label": "Show opening times",
+      "default": true
+    },
+    {
+      "type": "toggle",
+      "key": "show_testimonials",
+      "label": "Show testimonials",
+      "default": true
+    },
+    {
+      "type": "text",
+      "key": "testimonials_note",
+      "label": "Note under testimonials"
+    },
+    {
+      "type": "rich text",
+      "key": "content",
+      "label": "Welcome text",
+      "options": {
+        "outputFormat": "markdown",
+        "blockFormats": [
+          "blockquote",
+          "heading",
+          "hr",
+          "orderedList",
+          "unorderedList"
+        ],
+        "inlineFormats": [
+          "em",
+          "strong",
+          "link"
+        ],
+        "minHeading": 2,
+        "maxHeading": 4,
+        "allowRaw": false,
+        "linkOptions": [
+          "allowExternal",
+          "allowInternal"
+        ]
+      }
+    }
+  ]
+}
