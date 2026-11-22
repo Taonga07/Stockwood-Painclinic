@@ -2,8 +2,16 @@
   "fields": [
     {
       "type": "text",
+      "default": null,
+      "icon": "text-input",
       "key": "title",
       "label": "Post Title",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Content",
       "validation": {
         "enforceMinMax": true,
         "max": null,
@@ -12,39 +20,23 @@
         "regexError": null,
         "required": true,
         "unit": "length"
-      }
-    },
-    {
-      "type": "date",
-      "key": "date",
-      "label": "Published",
-      "options": {
-        "outputFormat": "iso",
-        "removable": false,
-        "showTime": false,
-        "defaultToNow": true,
-        "useAsUpdatedAt": false,
-        "only": null
       },
-      "validation": {
-        "max": null,
-        "min": null,
-        "required": true,
-        "unit": "date",
-        "isString": true
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
       }
-    },
-    {
-      "type": "toggle",
-      "key": "draft",
-      "label": "Draft",
-      "default": false,
-      "description": "Draft posts are not published by Hugo."
     },
     {
       "type": "rich text",
+      "default": null,
+      "icon": "text",
       "key": "content",
-      "label": "Post Content",
+      "label": "Post text (Markdown)",
+      "localised": false,
       "options": {
         "outputFormat": "markdown",
         "blockFormats": [
@@ -59,14 +51,113 @@
           "strong",
           "link"
         ],
+        "formatOptions": [
+          "allowQuoteFooters",
+          "allowNestedLists"
+        ],
+        "inputRuleOptions": [
+          "autoquotes",
+          "dashes",
+          "ellipsis",
+          "noDoubleCaps",
+          "noDoubleSpace"
+        ],
         "minHeading": 2,
         "maxHeading": 4,
+        "codeLangs": [
+          "html",
+          "css",
+          "javascript",
+          "markdown"
+        ],
         "allowRaw": false,
+        "urlTemplate": "",
+        "urlSuffix": "",
         "linkOptions": [
           "allowExternal",
           "allowInternal"
         ]
+      },
+      "tab": "Content",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
       }
+    },
+    {
+      "type": "date",
+      "default": null,
+      "key": "date",
+      "label": "Published",
+      "localised": false,
+      "options": {
+        "outputFormat": "iso",
+        "removable": false,
+        "showTime": false,
+        "defaultToNow": true,
+        "useAsUpdatedAt": false,
+        "only": null
+      },
+      "tab": "Post settings",
+      "validation": {
+        "max": null,
+        "min": null,
+        "required": true,
+        "unit": "date",
+        "isString": true
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "toggle",
+      "default": false,
+      "description": "Draft posts are not published by Hugo.",
+      "key": "draft",
+      "label": "Draft",
+      "localised": false,
+      "options": {
+        "iconLeft": null,
+        "iconRight": null
+      },
+      "tab": "Post settings",
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    }
+  ],
+  "tabs": [
+    {
+      "label": "Content",
+      "groupAs": null
+    },
+    {
+      "label": "Post settings",
+      "groupAs": null
     }
   ]
 }

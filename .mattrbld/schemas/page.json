@@ -2,8 +2,16 @@
   "fields": [
     {
       "type": "text",
+      "default": null,
+      "icon": "text-input",
       "key": "title",
       "label": "Page Title",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Content",
       "validation": {
         "enforceMinMax": true,
         "max": null,
@@ -12,54 +20,23 @@
         "regexError": null,
         "required": true,
         "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
       }
     },
     {
-      "type": "text",
-      "key": "eyebrow",
-      "label": "Eyebrow",
-      "description": "Small label above the heading. Leave empty to use the parent section name."
-    },
-    {
-      "type": "text",
-      "key": "description",
-      "label": "Meta Description",
-      "description": "Optional. Falls back to the site description."
-    },
-    {
-      "type": "toggle",
-      "key": "hide_sidebar",
-      "label": "Hide sidebar",
-      "default": false,
-      "description": "Hide the 'get in touch' sidebar."
-    },
-    {
-      "type": "group",
-      "key": "lead_image",
-      "label": "Lead image",
-      "value": [
-        {
-          "type": "image",
-          "key": "src",
-          "label": "Image",
-          "options": {
-            "resolutionHint": "",
-            "removable": true,
-            "simple": true
-          }
-        },
-        {
-          "type": "text",
-          "key": "alt",
-          "label": "Alt text",
-          "description": "Describe the image for screen readers."
-        }
-      ]
-    },
-    {
       "type": "rich text",
+      "default": null,
+      "icon": "text",
       "key": "content",
-      "label": "Page Content",
+      "label": "Page text (Markdown)",
+      "localised": false,
       "options": {
         "outputFormat": "markdown",
         "blockFormats": [
@@ -74,14 +51,221 @@
           "strong",
           "link"
         ],
+        "formatOptions": [
+          "allowQuoteFooters",
+          "allowNestedLists"
+        ],
+        "inputRuleOptions": [
+          "autoquotes",
+          "dashes",
+          "ellipsis",
+          "noDoubleCaps",
+          "noDoubleSpace"
+        ],
         "minHeading": 2,
         "maxHeading": 4,
+        "codeLangs": [
+          "html",
+          "css",
+          "javascript",
+          "markdown"
+        ],
         "allowRaw": false,
+        "urlTemplate": "",
+        "urlSuffix": "",
         "linkOptions": [
           "allowExternal",
           "allowInternal"
         ]
+      },
+      "tab": "Content",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
       }
+    },
+    {
+      "type": "text",
+      "default": null,
+      "description": "Small label above the heading. Leave empty to use the parent section name.",
+      "icon": "text-input",
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Page settings",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "text",
+      "default": null,
+      "description": "Optional. Falls back to the site description.",
+      "icon": "text-input",
+      "key": "description",
+      "label": "Meta description",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Page settings",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "toggle",
+      "default": false,
+      "description": "Hide the 'get in touch' sidebar.",
+      "key": "hide_sidebar",
+      "label": "Hide sidebar",
+      "localised": false,
+      "options": {
+        "iconLeft": null,
+        "iconRight": null
+      },
+      "tab": "Page settings",
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "group",
+      "default": null,
+      "key": "lead_image",
+      "label": "Lead image (image shortcode)",
+      "localised": false,
+      "options": {},
+      "tab": "Shortcodes",
+      "value": [
+        {
+          "type": "image",
+          "default": null,
+          "key": "src",
+          "label": "Image",
+          "localised": false,
+          "options": {
+            "resolutionHint": "",
+            "removable": true,
+            "simple": true
+          },
+          "validation": {
+            "max": null,
+            "required": false,
+            "unit": "filesize (MB)"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
+        },
+        {
+          "type": "text",
+          "default": null,
+          "description": "Describe the image for screen readers.",
+          "icon": "text-input",
+          "key": "alt",
+          "label": "Alt text",
+          "localised": false,
+          "options": {
+            "wrapping": true,
+            "multiline": false
+          },
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": false,
+            "unit": "length"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
+        }
+      ],
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    }
+  ],
+  "tabs": [
+    {
+      "label": "Content",
+      "groupAs": null
+    },
+    {
+      "label": "Page settings",
+      "groupAs": null
+    },
+    {
+      "label": "Shortcodes",
+      "groupAs": null
     }
   ]
 }

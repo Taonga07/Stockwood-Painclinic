@@ -2,8 +2,16 @@
   "fields": [
     {
       "type": "text",
+      "default": null,
+      "icon": "text-input",
       "key": "title",
       "label": "Page Title",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Content",
       "validation": {
         "enforceMinMax": true,
         "max": null,
@@ -12,85 +20,23 @@
         "regexError": null,
         "required": true,
         "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
       }
     },
     {
-      "type": "text",
-      "key": "eyebrow",
-      "label": "Eyebrow",
-      "description": "Small label above the heading. Leave empty to use the parent section name."
-    },
-    {
-      "type": "text",
-      "key": "description",
-      "label": "Meta Description",
-      "description": "Optional. Falls back to the site description."
-    },
-    {
-      "type": "toggle",
-      "key": "hide_sidebar",
-      "label": "Hide sidebar",
-      "default": false,
-      "description": "Hide the 'get in touch' sidebar."
-    },
-    {
-      "type": "rows",
-      "key": "clinics",
-      "label": "Clinics",
-      "options": {
-        "compact": false,
-        "allowEditing": true,
-        "itemLabel": "Clinic"
-      },
-      "value": [
-        {
-          "type": "text",
-          "key": "name",
-          "label": "Name",
-          "validation": {
-            "enforceMinMax": true,
-            "max": null,
-            "min": null,
-            "regex": null,
-            "regexError": null,
-            "required": true,
-            "unit": "length"
-          }
-        },
-        {
-          "type": "image",
-          "key": "image",
-          "label": "Photo",
-          "options": {
-            "resolutionHint": "",
-            "removable": false,
-            "simple": true
-          },
-          "validation": {
-            "required": true
-          }
-        },
-        {
-          "type": "text",
-          "key": "link",
-          "label": "Page link",
-          "description": "e.g. /find-us/find-us-stockwood/",
-          "validation": {
-            "enforceMinMax": true,
-            "max": null,
-            "min": null,
-            "regex": null,
-            "regexError": null,
-            "required": true,
-            "unit": "length"
-          }
-        }
-      ]
-    },
-    {
       "type": "rich text",
+      "default": null,
+      "icon": "text",
       "key": "content",
-      "label": "Page Content",
+      "label": "Page text (Markdown)",
+      "localised": false,
       "options": {
         "outputFormat": "markdown",
         "blockFormats": [
@@ -105,14 +51,259 @@
           "strong",
           "link"
         ],
+        "formatOptions": [
+          "allowQuoteFooters",
+          "allowNestedLists"
+        ],
+        "inputRuleOptions": [
+          "autoquotes",
+          "dashes",
+          "ellipsis",
+          "noDoubleCaps",
+          "noDoubleSpace"
+        ],
         "minHeading": 2,
         "maxHeading": 4,
+        "codeLangs": [
+          "html",
+          "css",
+          "javascript",
+          "markdown"
+        ],
         "allowRaw": false,
+        "urlTemplate": "",
+        "urlSuffix": "",
         "linkOptions": [
           "allowExternal",
           "allowInternal"
         ]
+      },
+      "tab": "Content",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
       }
+    },
+    {
+      "type": "text",
+      "default": null,
+      "description": "Small label above the heading. Leave empty to use the parent section name.",
+      "icon": "text-input",
+      "key": "eyebrow",
+      "label": "Eyebrow",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Page settings",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "text",
+      "default": null,
+      "description": "Optional. Falls back to the site description.",
+      "icon": "text-input",
+      "key": "description",
+      "label": "Meta description",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Page settings",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "toggle",
+      "default": false,
+      "description": "Hide the 'get in touch' sidebar.",
+      "key": "hide_sidebar",
+      "label": "Hide sidebar",
+      "localised": false,
+      "options": {
+        "iconLeft": null,
+        "iconRight": null
+      },
+      "tab": "Page settings",
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "rows",
+      "default": null,
+      "key": "clinics",
+      "label": "Clinic cards (clinics shortcode)",
+      "localised": false,
+      "options": {
+        "compact": false,
+        "allowEditing": true,
+        "itemLabel": "Clinic"
+      },
+      "tab": "Shortcodes",
+      "validation": {
+        "max": null,
+        "min": null,
+        "unit": "rows"
+      },
+      "value": [
+        {
+          "type": "text",
+          "default": null,
+          "icon": "text-input",
+          "key": "name",
+          "label": "Name",
+          "localised": false,
+          "options": {
+            "wrapping": true,
+            "multiline": false
+          },
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": true,
+            "unit": "length"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
+        },
+        {
+          "type": "image",
+          "default": null,
+          "key": "image",
+          "label": "Photo",
+          "localised": false,
+          "options": {
+            "resolutionHint": "",
+            "removable": false,
+            "simple": true
+          },
+          "validation": {
+            "max": null,
+            "required": true,
+            "unit": "filesize (MB)"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
+        },
+        {
+          "type": "text",
+          "default": null,
+          "description": "e.g. /find-us/find-us-stockwood/",
+          "icon": "text-input",
+          "key": "link",
+          "label": "Page link",
+          "localised": false,
+          "options": {
+            "wrapping": true,
+            "multiline": false
+          },
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": true,
+            "unit": "length"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
+        }
+      ],
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    }
+  ],
+  "tabs": [
+    {
+      "label": "Content",
+      "groupAs": null
+    },
+    {
+      "label": "Page settings",
+      "groupAs": null
+    },
+    {
+      "label": "Shortcodes",
+      "groupAs": null
     }
   ]
 }

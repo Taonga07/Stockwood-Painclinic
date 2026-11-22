@@ -2,8 +2,16 @@
   "fields": [
     {
       "type": "text",
+      "default": null,
+      "icon": "text-input",
       "key": "title",
       "label": "Page Title",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Content",
       "validation": {
         "enforceMinMax": true,
         "max": null,
@@ -12,132 +20,23 @@
         "regexError": null,
         "required": true,
         "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
       }
     },
     {
-      "type": "text",
-      "key": "description",
-      "label": "Meta Description"
-    },
-    {
-      "type": "rows",
-      "key": "hero_slides",
-      "label": "Hero slides",
-      "options": {
-        "compact": false,
-        "allowEditing": true,
-        "itemLabel": "Slide"
-      },
-      "value": [
-        {
-          "type": "image",
-          "key": "image",
-          "label": "Banner image",
-          "options": {
-            "resolutionHint": "",
-            "removable": false,
-            "simple": true
-          },
-          "validation": {
-            "required": true
-          }
-        },
-        {
-          "type": "text",
-          "key": "heading",
-          "label": "Heading",
-          "validation": {
-            "enforceMinMax": true,
-            "max": null,
-            "min": null,
-            "regex": null,
-            "regexError": null,
-            "required": true,
-            "unit": "length"
-          }
-        },
-        {
-          "type": "text",
-          "key": "text",
-          "label": "Sub-text"
-        },
-        {
-          "type": "text",
-          "key": "link",
-          "label": "Link",
-          "description": "e.g. /osteopathy/pregnancy/"
-        },
-        {
-          "type": "text",
-          "key": "link_text",
-          "label": "Button text",
-          "description": "Defaults to 'More Detail'."
-        }
-      ]
-    },
-    {
-      "type": "group",
-      "key": "welcome",
-      "label": "Welcome section",
-      "value": [
-        {
-          "type": "image",
-          "key": "image",
-          "label": "Photo",
-          "options": {
-            "resolutionHint": "",
-            "removable": true,
-            "simple": true
-          }
-        },
-        {
-          "type": "text",
-          "key": "eyebrow",
-          "label": "Eyebrow",
-          "description": "Defaults to 'Welcome'."
-        },
-        {
-          "type": "text",
-          "key": "heading",
-          "label": "Heading",
-          "validation": {
-            "enforceMinMax": true,
-            "max": null,
-            "min": null,
-            "regex": null,
-            "regexError": null,
-            "required": true,
-            "unit": "length"
-          }
-        },
-        {
-          "type": "text",
-          "key": "lede",
-          "label": "Lede"
-        }
-      ]
-    },
-    {
-      "type": "toggle",
-      "key": "show_opening_hours",
-      "label": "Show opening times",
-      "default": true
-    },
-    {
-      "type": "toggle",
-      "key": "show_testimonials",
-      "label": "Show testimonials",
-      "default": true
-    },
-    {
-      "type": "text",
-      "key": "testimonials_note",
-      "label": "Note under testimonials"
-    },
-    {
       "type": "rich text",
+      "default": null,
+      "icon": "text",
       "key": "content",
-      "label": "Welcome text",
+      "label": "Welcome text (Markdown)",
+      "localised": false,
       "options": {
         "outputFormat": "markdown",
         "blockFormats": [
@@ -152,14 +51,466 @@
           "strong",
           "link"
         ],
+        "formatOptions": [
+          "allowQuoteFooters",
+          "allowNestedLists"
+        ],
+        "inputRuleOptions": [
+          "autoquotes",
+          "dashes",
+          "ellipsis",
+          "noDoubleCaps",
+          "noDoubleSpace"
+        ],
         "minHeading": 2,
         "maxHeading": 4,
+        "codeLangs": [
+          "html",
+          "css",
+          "javascript",
+          "markdown"
+        ],
         "allowRaw": false,
+        "urlTemplate": "",
+        "urlSuffix": "",
         "linkOptions": [
           "allowExternal",
           "allowInternal"
         ]
+      },
+      "tab": "Content",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
       }
+    },
+    {
+      "type": "text",
+      "default": null,
+      "icon": "text-input",
+      "key": "description",
+      "label": "Meta description",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Page settings",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "rows",
+      "default": null,
+      "key": "hero_slides",
+      "label": "Hero slides (hero_slider shortcode)",
+      "localised": false,
+      "options": {
+        "compact": false,
+        "allowEditing": true,
+        "itemLabel": "Slide"
+      },
+      "tab": "Shortcodes",
+      "validation": {
+        "max": null,
+        "min": null,
+        "unit": "rows"
+      },
+      "value": [
+        {
+          "type": "image",
+          "default": null,
+          "key": "image",
+          "label": "Banner image",
+          "localised": false,
+          "options": {
+            "resolutionHint": "",
+            "removable": false,
+            "simple": true
+          },
+          "validation": {
+            "max": null,
+            "required": true,
+            "unit": "filesize (MB)"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
+        },
+        {
+          "type": "text",
+          "default": null,
+          "icon": "text-input",
+          "key": "heading",
+          "label": "Heading",
+          "localised": false,
+          "options": {
+            "wrapping": true,
+            "multiline": false
+          },
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": true,
+            "unit": "length"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
+        },
+        {
+          "type": "text",
+          "default": null,
+          "icon": "text-input",
+          "key": "text",
+          "label": "Sub-text",
+          "localised": false,
+          "options": {
+            "wrapping": true,
+            "multiline": false
+          },
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": false,
+            "unit": "length"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
+        },
+        {
+          "type": "text",
+          "default": null,
+          "description": "e.g. /osteopathy/pregnancy/",
+          "icon": "text-input",
+          "key": "link",
+          "label": "Link",
+          "localised": false,
+          "options": {
+            "wrapping": true,
+            "multiline": false
+          },
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": false,
+            "unit": "length"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
+        },
+        {
+          "type": "text",
+          "default": null,
+          "description": "Defaults to 'More Detail'.",
+          "icon": "text-input",
+          "key": "link_text",
+          "label": "Button text",
+          "localised": false,
+          "options": {
+            "wrapping": true,
+            "multiline": false
+          },
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": false,
+            "unit": "length"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
+        }
+      ],
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "group",
+      "default": null,
+      "key": "welcome",
+      "label": "Welcome section (welcome_intro shortcode)",
+      "localised": false,
+      "options": {},
+      "tab": "Shortcodes",
+      "value": [
+        {
+          "type": "image",
+          "default": null,
+          "key": "image",
+          "label": "Photo",
+          "localised": false,
+          "options": {
+            "resolutionHint": "",
+            "removable": true,
+            "simple": true
+          },
+          "validation": {
+            "max": null,
+            "required": false,
+            "unit": "filesize (MB)"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
+        },
+        {
+          "type": "text",
+          "default": null,
+          "description": "Defaults to 'Welcome'.",
+          "icon": "text-input",
+          "key": "eyebrow",
+          "label": "Eyebrow",
+          "localised": false,
+          "options": {
+            "wrapping": true,
+            "multiline": false
+          },
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": false,
+            "unit": "length"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
+        },
+        {
+          "type": "text",
+          "default": null,
+          "icon": "text-input",
+          "key": "heading",
+          "label": "Heading",
+          "localised": false,
+          "options": {
+            "wrapping": true,
+            "multiline": false
+          },
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": true,
+            "unit": "length"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
+        },
+        {
+          "type": "text",
+          "default": null,
+          "icon": "text-input",
+          "key": "lede",
+          "label": "Lede",
+          "localised": false,
+          "options": {
+            "wrapping": true,
+            "multiline": false
+          },
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": false,
+            "unit": "length"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
+        }
+      ],
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "toggle",
+      "default": true,
+      "key": "show_opening_hours",
+      "label": "Opening times (opening_hours shortcode)",
+      "localised": false,
+      "options": {
+        "iconLeft": null,
+        "iconRight": null
+      },
+      "tab": "Shortcodes",
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "toggle",
+      "default": true,
+      "key": "show_testimonials",
+      "label": "Testimonials (testimonials shortcode)",
+      "localised": false,
+      "options": {
+        "iconLeft": null,
+        "iconRight": null
+      },
+      "tab": "Shortcodes",
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    },
+    {
+      "type": "text",
+      "default": null,
+      "icon": "text-input",
+      "key": "testimonials_note",
+      "label": "Note under testimonials",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Shortcodes",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    }
+  ],
+  "tabs": [
+    {
+      "label": "Content",
+      "groupAs": null
+    },
+    {
+      "label": "Page settings",
+      "groupAs": null
+    },
+    {
+      "label": "Shortcodes",
+      "groupAs": null
     }
   ]
 }

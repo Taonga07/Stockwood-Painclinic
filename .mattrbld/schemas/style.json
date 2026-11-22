@@ -2,176 +2,421 @@
   "fields": [
     {
       "type": "group",
+      "default": null,
       "key": "colors",
       "label": "Colours",
+      "localised": false,
+      "options": {},
+      "tab": "Data",
       "value": [
         {
           "type": "color",
+          "default": null,
           "key": "paper",
           "label": "Paper",
+          "localised": false,
           "options": {
             "format": "hex",
             "removable": false,
             "useBrandPalette": false,
             "paletteOnly": false,
             "palette": []
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
           }
         },
         {
           "type": "color",
+          "default": null,
           "key": "paper_deep",
           "label": "Paper (deep)",
+          "localised": false,
           "options": {
             "format": "hex",
             "removable": false,
             "useBrandPalette": false,
             "paletteOnly": false,
             "palette": []
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
           }
         },
         {
           "type": "color",
+          "default": null,
           "key": "white",
           "label": "White",
+          "localised": false,
           "options": {
             "format": "hex",
             "removable": false,
             "useBrandPalette": false,
             "paletteOnly": false,
             "palette": []
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
           }
         },
         {
           "type": "color",
+          "default": null,
           "key": "ink",
           "label": "Ink",
+          "localised": false,
           "options": {
             "format": "hex",
             "removable": false,
             "useBrandPalette": false,
             "paletteOnly": false,
             "palette": []
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
           }
         },
         {
           "type": "color",
+          "default": null,
           "key": "ink_soft",
           "label": "Ink (soft)",
+          "localised": false,
           "options": {
             "format": "hex",
             "removable": false,
             "useBrandPalette": false,
             "paletteOnly": false,
             "palette": []
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
           }
         },
         {
           "type": "color",
+          "default": null,
           "key": "sage",
           "label": "Sage",
+          "localised": false,
           "options": {
             "format": "hex",
             "removable": false,
             "useBrandPalette": false,
             "paletteOnly": false,
             "palette": []
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
           }
         },
         {
           "type": "color",
+          "default": null,
           "key": "sage_deep",
           "label": "Sage (deep)",
+          "localised": false,
           "options": {
             "format": "hex",
             "removable": false,
             "useBrandPalette": false,
             "paletteOnly": false,
             "palette": []
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
           }
         },
         {
           "type": "color",
+          "default": null,
           "key": "sage_pale",
           "label": "Sage (pale)",
+          "localised": false,
           "options": {
             "format": "hex",
             "removable": false,
             "useBrandPalette": false,
             "paletteOnly": false,
             "palette": []
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
           }
         },
         {
           "type": "color",
+          "default": null,
           "key": "brass",
           "label": "Brass",
+          "localised": false,
           "options": {
             "format": "hex",
             "removable": false,
             "useBrandPalette": false,
             "paletteOnly": false,
             "palette": []
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
           }
         },
         {
           "type": "color",
+          "default": null,
           "key": "brass_deep",
           "label": "Brass (deep)",
+          "localised": false,
           "options": {
             "format": "hex",
             "removable": false,
             "useBrandPalette": false,
             "paletteOnly": false,
             "palette": []
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
           }
         },
         {
           "type": "color",
+          "default": null,
           "key": "line",
           "label": "Line",
+          "localised": false,
           "options": {
             "format": "hex",
             "removable": false,
             "useBrandPalette": false,
             "paletteOnly": false,
             "palette": []
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
           }
         }
-      ]
+      ],
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
     },
     {
       "type": "group",
+      "default": null,
       "key": "typography",
       "label": "Typography",
+      "localised": false,
+      "options": {},
+      "tab": "Data",
       "value": [
         {
           "type": "text",
+          "default": null,
+          "icon": "text-input",
           "key": "font_display",
-          "label": "Display font stack"
+          "label": "Display font stack",
+          "localised": false,
+          "options": {
+            "wrapping": true,
+            "multiline": false
+          },
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": false,
+            "unit": "length"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
         },
         {
           "type": "text",
+          "default": null,
+          "icon": "text-input",
           "key": "font_body",
-          "label": "Body font stack"
+          "label": "Body font stack",
+          "localised": false,
+          "options": {
+            "wrapping": true,
+            "multiline": false
+          },
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": false,
+            "unit": "length"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
         }
-      ]
+      ],
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
     },
     {
       "type": "group",
+      "default": null,
       "key": "layout",
       "label": "Layout",
+      "localised": false,
+      "options": {},
+      "tab": "Data",
       "value": [
         {
           "type": "text",
+          "default": null,
+          "icon": "text-input",
           "key": "wrap_width",
-          "label": "Content width"
+          "label": "Content width",
+          "localised": false,
+          "options": {
+            "wrapping": true,
+            "multiline": false
+          },
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": false,
+            "unit": "length"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
         },
         {
           "type": "text",
+          "default": null,
+          "icon": "text-input",
           "key": "radius",
-          "label": "Corner radius"
+          "label": "Corner radius",
+          "localised": false,
+          "options": {
+            "wrapping": true,
+            "multiline": false
+          },
+          "validation": {
+            "enforceMinMax": true,
+            "max": null,
+            "min": null,
+            "regex": null,
+            "regexError": null,
+            "required": false,
+            "unit": "length"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
+          }
         }
-      ]
+      ],
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    }
+  ],
+  "tabs": [
+    {
+      "label": "Data",
+      "groupAs": null
     }
   ]
 }

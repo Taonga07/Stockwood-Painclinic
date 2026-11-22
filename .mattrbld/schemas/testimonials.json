@@ -2,18 +2,29 @@
   "fields": [
     {
       "type": "rows",
+      "default": null,
       "key": "items",
       "label": "Testimonials",
+      "localised": false,
       "options": {
         "compact": false,
         "allowEditing": true,
         "itemLabel": "Testimonial"
       },
+      "tab": "Data",
+      "validation": {
+        "max": null,
+        "min": null,
+        "unit": "rows"
+      },
       "value": [
         {
           "type": "text",
+          "default": null,
+          "icon": "text-input",
           "key": "quote",
           "label": "Quote",
+          "localised": false,
           "options": {
             "wrapping": true,
             "multiline": true
@@ -26,13 +37,28 @@
             "regexError": null,
             "required": true,
             "unit": "length"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
           }
         },
         {
           "type": "text",
+          "default": null,
+          "description": "e.g. Sarah F, Keynsham Bristol",
+          "icon": "text-input",
           "key": "author",
           "label": "Author",
-          "description": "e.g. Sarah F, Keynsham Bristol",
+          "localised": false,
+          "options": {
+            "wrapping": true,
+            "multiline": false
+          },
           "validation": {
             "enforceMinMax": true,
             "max": null,
@@ -41,9 +67,30 @@
             "regexError": null,
             "required": true,
             "unit": "length"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
           }
         }
-      ]
+      ],
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    }
+  ],
+  "tabs": [
+    {
+      "label": "Data",
+      "groupAs": null
     }
   ]
 }

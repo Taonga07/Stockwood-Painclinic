@@ -2,18 +2,33 @@
   "fields": [
     {
       "type": "rows",
+      "default": null,
       "key": "hours",
       "label": "Opening hours",
+      "localised": false,
       "options": {
         "compact": true,
         "allowEditing": true,
         "itemLabel": "Day"
       },
+      "tab": "Data",
+      "validation": {
+        "max": null,
+        "min": null,
+        "unit": "rows"
+      },
       "value": [
         {
           "type": "text",
+          "default": null,
+          "icon": "text-input",
           "key": "day",
           "label": "Day",
+          "localised": false,
+          "options": {
+            "wrapping": true,
+            "multiline": false
+          },
           "validation": {
             "enforceMinMax": true,
             "max": null,
@@ -22,13 +37,28 @@
             "regexError": null,
             "required": true,
             "unit": "length"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
           }
         },
         {
           "type": "text",
+          "default": null,
+          "description": "e.g. 8:00 AM - 1:00 PM, or CLOSED",
+          "icon": "text-input",
           "key": "hours",
           "label": "Hours",
-          "description": "e.g. 8:00 AM - 1:00 PM, or CLOSED",
+          "localised": false,
+          "options": {
+            "wrapping": true,
+            "multiline": false
+          },
           "validation": {
             "enforceMinMax": true,
             "max": null,
@@ -37,9 +67,30 @@
             "regexError": null,
             "required": true,
             "unit": "length"
+          },
+          "value": null,
+          "version": 1,
+          "visibility": {
+            "hidden": false,
+            "showByValue": {
+              "field": null
+            }
           }
         }
-      ]
+      ],
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
+    }
+  ],
+  "tabs": [
+    {
+      "label": "Data",
+      "groupAs": null
     }
   ]
 }

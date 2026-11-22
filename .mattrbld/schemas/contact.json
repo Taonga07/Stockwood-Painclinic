@@ -2,8 +2,16 @@
   "fields": [
     {
       "type": "text",
+      "default": null,
+      "icon": "text-input",
       "key": "phone",
       "label": "Phone (display)",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Data",
       "validation": {
         "enforceMinMax": true,
         "max": null,
@@ -12,18 +20,59 @@
         "regexError": null,
         "required": true,
         "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
       }
     },
     {
       "type": "text",
+      "default": null,
+      "description": "e.g. tel:+441275830241",
+      "icon": "text-input",
       "key": "phone_href",
       "label": "Phone link",
-      "description": "e.g. tel:+441275830241"
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Data",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
     },
     {
       "type": "text",
+      "default": null,
+      "icon": "text-input",
       "key": "email",
       "label": "Email",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Data",
       "validation": {
         "enforceMinMax": true,
         "max": null,
@@ -32,27 +81,112 @@
         "regexError": null,
         "required": true,
         "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
       }
     },
     {
       "type": "text",
+      "default": null,
+      "icon": "text-input",
       "key": "address1",
-      "label": "Address line 1"
+      "label": "Address line 1",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Data",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
     },
     {
       "type": "text",
+      "default": null,
+      "icon": "text-input",
       "key": "address2",
-      "label": "Address line 2"
+      "label": "Address line 2",
+      "localised": false,
+      "options": {
+        "wrapping": true,
+        "multiline": false
+      },
+      "tab": "Data",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
+      }
     },
     {
       "type": "text",
+      "default": null,
+      "description": "Default meta description.",
+      "icon": "text-input",
       "key": "site_description",
       "label": "Site description",
-      "description": "Default meta description for pages without their own.",
+      "localised": false,
       "options": {
         "wrapping": true,
         "multiline": true
+      },
+      "tab": "Data",
+      "validation": {
+        "enforceMinMax": true,
+        "max": null,
+        "min": null,
+        "regex": null,
+        "regexError": null,
+        "required": false,
+        "unit": "length"
+      },
+      "value": null,
+      "version": 1,
+      "visibility": {
+        "hidden": false,
+        "showByValue": {
+          "field": null
+        }
       }
+    }
+  ],
+  "tabs": [
+    {
+      "label": "Data",
+      "groupAs": null
     }
   ]
 }
